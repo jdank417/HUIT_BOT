@@ -1,506 +1,291 @@
-@author: Jason Dank - Technical Support Engineer Intern (Field Tech - Allston / SEAS)
-@contact: jason_dank@harvard.edu - Email with change requests
-
-
-
-
+[SECTION: IMPORTANT LINKS]
 Harvard Key: https://key.harvard.edu/
-
 Harvard Secure: https://getonline.harvard.edu/
-
 Harvard VPN: https://vpn.harvard.edu/
-
-CrashPlan WebPortal Link: https://console.us2.crashplan.com/login/#/login?to=%2Fapp%2F%23%2Fconsole%2Fdashboard
-
-CrashPlan Restore Instructions: https://harvard.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsysparm_article%3DKB0017874%26sysparm_rank%3D1%26sysparm_tsqueryId%3D4b12dd4c932ac2904567b1fd1dba1009
-
-Kensington Dock Software: https://www.synaptics.com/products/displaylink-graphics/downloads/macos
-
-Computer Standards (Faculty / Staff): https://harvard.service-now.com/ithelp?id=sc_cat_item&sys_id=05d7a432dbacc7c083a2f3f7bf961977
-
-KB article for HUDS (HUDS IT Support Manual): https://harvard.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsys_kb_id%3Df7d5123f1b788450efd8a79b2d4bcb60
-
-Fleet Management Maxwork Website sign-on (Garage at 28T): https://maxwork.campusservices.harvard.edu/emmsso/startcenter/main.action?ts=1718038994260
-
-Fleet Management Maxwork Server URL: https://maxwork.campusservices.harvard.edu/emmsso
-
-Fleet Management All Data: (User: harv5589 / Pass: harv5589)
-
-SEC Instructor Account: (User: Instructor / Pass:150InstructSEAS)
-
-FAS Software Download Page: https://huit.harvard.edu/fas-software-downloads
-
-Science Center WISC Loaner Request: https://harvard.service-now.com/ithelp?id=sc_cat_item&sys_id=fc5cab849710ad509af6d804a253af0a
-
-Dell Repair Email: support@dellfs.zendesk.com
-
-Dell Repair KB Article: KB0018049: https://harvard.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsys_kb_id%3D0e441be5dbf36414babda8dad3961980
-
-Field Guide Knowledge Base: https://harvard.service-now.com/ithelp?id=kb_article&sys_id=0d76e109db710850dffdbc32ba9619f7#sccm
-
-Food Pro Knowledge Article: https://harvard.service-now.com/ithelp?id=kb_article&sys_id=KB0011045
-
-BitLocker Recovery: https://uiswapps1000012.university.harvard.edu/helpdesk/
-
-FAS Work Order: https://oprp.fas.harvard.edu/presto-2
-
-Dell Lookup: https://www.dell.com/support/home/en-us
-
-HP Printer driver package from Apple: https://support.apple.com/en-us/106385
-
-USMT Data Migration Docs (Service Now): https://harvard.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsys_kb_id%3Db048ce1f1b81fbc4efd8a79b2d4bcb9f
-
+Service Now: https://harvard.service-now.com/nav_to.do?uri=%2Ftask_list.do%3Fsysparm_query%3Dactive%3Dtrue%5Esys_class_name!%3Drm_product%5Estate!%3D106%5Eassigned_to%3Djavascript:getMyAssignments()%5Esys_class_name!%3Dpm_project%5Esys_class_name!%3Dpm_project_task%5EEQ%26sysparm_userpref_module%3Dbd4523722b6f4100245f47f217da1531%26sysparm_clear_stack%3Dtrue
+People Soft: https://peoplesoft.hrapps.harvard.edu/psc/psprdaws/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
 Harvard Training Portal: https://trainingportal.harvard.edu/Saba/Web_spf/NA1PRD0068/app/dashboard
 
-Service Now: https://harvard.service-now.com/nav_to.do?uri=%2Ftask_list.do%3Fsysparm_query%3Dactive%3Dtrue%5Esys_class_name!%3Drm_product%5Estate!%3D106%5Eassigned_to%3Djavascript:getMyAssignments()%5Esys_class_name!%3Dpm_project%5Esys_class_name!%3Dpm_project_task%5EEQ%26sysparm_userpref_module%3Dbd4523722b6f4100245f47f217da1531%26sysparm_clear_stack%3Dtrue
+[SECTION: SUPPORT RESOURCES]
+CrashPlan WebPortal: https://console.us2.crashplan.com/login/#/login?to=%2Fapp%2F%23%2Fconsole%2Fdashboard
+CrashPlan Restore Instructions: https://harvard.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsysparm_article%3DKB0017874%26sysparm_rank%3D1%26sysparm_tsqueryId%3D4b12dd4c932ac2904567b1fd1dba1009
+Field Guide Knowledge Base: https://harvard.service-now.com/ithelp?id=kb_article&sys_id=0d76e109db710850dffdbc32ba9619f7#sccm
+BitLocker Recovery: https://uiswapps1000012.university.harvard.edu/helpdesk/
+USMT Data Migration Docs: https://harvard.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsys_kb_id%3Db048ce1f1b81fbc4efd8a79b2d4bcb9f
 
-People Soft: https://peoplesoft.hrapps.harvard.edu/psc/psprdaws/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
+[SECTION: SOFTWARE AND DOWNLOADS]
+Kensington Dock Software: https://www.synaptics.com/products/displaylink-graphics/downloads/macos
+FAS Software Download Page: https://huit.harvard.edu/fas-software-downloads
+HP Printer driver package from Apple: https://support.apple.com/en-us/106385
+Dell Sound Card Diagnostic: https://www.dell.com/support/home/en-us/Home/Index/SoundCard
 
+[SECTION: IT SUPPORT MANUALS]
+HUDS IT Support Manual: https://harvard.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsys_kb_id%3Df7d5123f1b788450efd8a79b2d4bcb60
+Athletics IT Support Manual: https://harvard.service-now.com/ithelp?id=kb_article&sys_id=KB0017047
+Food Pro Knowledge Article: https://harvard.service-now.com/ithelp?id=kb_article&sys_id=KB0011045
+
+[SECTION: FLEET MANAGEMENT]
+Fleet Management Maxwork Website: https://maxwork.campusservices.harvard.edu/emmsso/startcenter/main.action?ts=1718038994260
+Fleet Management Maxwork Server: https://maxwork.campusservices.harvard.edu/emmsso
+Fleet Management All Data: User: harv5589 / Pass: harv5589
+
+[SECTION: COMPUTER STANDARDS AND REPAIR]
+Computer Standards (Faculty / Staff): https://harvard.service-now.com/ithelp?id=sc_cat_item&sys_id=05d7a432dbacc7c083a2f3f7bf961977
+Dell Repair Email: support@dellfs.zendesk.com
+Dell Repair KB Article: https://harvard.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsys_kb_id%3D0e441be5dbf36414babda8dad3961980
+Dell Lookup: https://www.dell.com/support/home/en-us
+FAS Work Order: https://oprp.fas.harvard.edu/presto-2
+
+[SECTION: SECURITY AND MANAGEMENT]
 Crowd Strike: https://agents.itsec.harvard.edu/
-
-SCCM Multi Serch: http://huit-esm-sccm.cadm.harvard.edu/reports/report/ConfigMgr_ESM/.ESM%20Custom%20Reports/HUIT%20-%20Computer%20Details%20-%20Multi%20Search
-
-People Search Connections: https://connections.harvard.edu/
-
-HUIT Tools (NOC): https://tools.noc.harvard.edu/
-
-AssetTrack: https://harvard.service-now.com/api/x_amiam_assettrack/atapi/FileService?/index.html#!/tasks
-
-MIDAS: https://midas.cadm.harvard.edu/menuHandler.do?target=search
-
-Dell Sound Card Dianostic: https://www.dell.com/support/home/en-us/Home/Index/SoundCard
-
+SCCM Multi Search: http://huit-esm-sccm.cadm.harvard.edu/reports/report/ConfigMgr_ESM/.ESM%20Custom%20Reports/HUIT%20-%20Computer%20Details%20-%20Multi%20Search
+HUIT Laps: https://laps.university.harvard.edu/index.html
 Jamf: https://casper01.cadm.harvard.edu:8443/
 
-Adobe Administrative Console: https://adminconsole.adobe.com/4C5B21AC546A7FDF0A4C98C6@AdobeOrg/users
-
-HUIT Laps: https://laps.university.harvard.edu/index.html
-
+[SECTION: PRINTING]
 CrimsonPrint Admin Portal: https://crimsonprint.huit.harvard.edu/admin
+Crimson Print POI HUID: 61559728 (Use only with explicit permission for registering Crimson Print Printers on the network)
+Crimson Print admin settings (ON PRINTER): Username: admin / Password: 31ElEngNJ7# (Consult Senior Tech or Manager before entering)
 
-Crimson Print POI HUID: HUID: 61559728 - Use this HUID for registering Crimson Print Printers on the network. This should only be done with explicit permission from a manager / Senior Tech and or Network Services
-
-Crimson Print admin settings (ON PRINTER): (Username: admin / Password: 31ElEngNJ7#) - Consult Senior Tech and or Manager before entering the Crimson Print Admin settings
-
+[SECTION: DIRECTORIES AND MAPS]
+People Search Connections: https://connections.harvard.edu/
 Harvard Athletics Staff Directory: https://gocrimson.com/staff-directory
-
-KB article for Athletics(ATHL) (Athletics IT Support Manual) https://harvard.service-now.com/ithelp?id=kb_article&sys_id=KB0017047
-
-Bombgar Remote Support (YOU, IT SIDE): https://harvardhuit.bomgarcloud.com/login/login
-
-Bombgar Remote Support (CLIENT): https://harvardhuit.bomgarcloud.com/
-
 Harvard Shuttles: http://www.shuttle.harvard.edu/
-
 Harvard Interactive Map: https://mapprod.cadm.harvard.edu/portal/apps/indoors/index.html?appid=2c3969f8d1b14147920610a68f6db713#?n=1716909824833
 
+[SECTION: REMOTE SUPPORT]
+Bombgar Remote Support (IT SIDE): https://harvardhuit.bomgarcloud.com/login/login
+Bombgar Remote Support (CLIENT): https://harvardhuit.bomgarcloud.com/
 
-________________________________Helpfull Tips______________________________
+[SECTION: ACCOUNTS AND LICENSING]
+SEC Instructor Account: User: Instructor / Pass:150InstructSEAS
+Adobe Administrative Console: https://adminconsole.adobe.com/4C5B21AC546A7FDF0A4C98C6@AdobeOrg/users
+
+[SECTION: ASSET MANAGEMENT]
+AssetTrack: https://harvard.service-now.com/api/x_amiam_assettrack/atapi/FileService?/index.html#!/tasks
+MIDAS: https://midas.cadm.harvard.edu/menuHandler.do?target=search
+
+[SECTION: NETWORK TOOLS]
+HUIT Tools (NOC): https://tools.noc.harvard.edu/
+
+[SECTION: HELPFUL TIPS]
+Mac Terminal Show During OS install: Command + L (show log)
 
 Mac having trouble pulling Office(or any) applications from the jamf server:
 Execute this command: sudo profiles renew -type enrollment
 
-_________________________________________________________________________
-
-Mac Terminal Show During OS install:
-Command + L (show log)
-_________________________________________________________________________
-
 Reinstall / Repair Jamf Profile:
 https://casper01.cadm.harvard.edu:8443/enroll/
-Sign in with your ADID/NetIDYou do that on the actual computer you want it installed on
+Sign in with your ADID/NetID on the actual computer you want it installed on
 Use their ADID to assign to
 Choose Athletics (or proper enrollment profile)
-________________________________________________________________________
-
-Installing Windows 11 from Boot media to HUITIZE:
-
-Before turning on the device, connect it to a charger and internet (preferably through a doc), and connect a USB with Windows 11 installation media on it
-Get into BIOS settings by pressing f12 on the startup
-Choose from a USB
-Pick the drive that you connected to the device
-Go through the Windows 11 install process (picking language, time zone, etc..)
-Insert product key if possible
-If not, you can bypass the product key and not use one (continue with limited setup)
-Choose Windows 11 Pro (unless specified otherwise)
-Once completed, it will start up traditional Windows 11 setup
-Disconnect from the internet for the process to avoid forcing a sign-in email
-Disconnect the USB from the device to avoid installing cycle lock
-Choose all default options, skip anything optional
-If it asks to connect to wifi without a skip option, press Shift + f10 (which opens Command Prompt)
-Type into the Command Prompt “OOBE\BYPASSNRO” and press Enter
-The device will restart and you will have to repeat the Windows 11 setup
-Once you reach the wifi setup option again, you should be given the option to skip the internet and continue setup “with limited access”
-For the name and password, use the traditional setup
-Name: huitadmin
-Password: H@rvard2021
-Security Questions: All answers are “Harvard”
-Windows will boot up for you to start HUITizing
-_________________________________________________________________________
-
-“Huitize” It (Windows Machine):
-
-Please follow these steps:
-Go to this link and download both the .ps1 file and the .bat file.
-Run the .bat file. This will install the HUIT toolkit, Chrome, Firefox, Adobe, and Office 365.
-When prompted by the power shell enter yes (Y) for all prompts to install the applications.
-The following will also open automatically:
-The Harvard VPN download page
-The Harvard Zoom download page
-This document
-Lastly, Windows settings will open and check for updates.
-Then Follow the Below steps to complete HUIT-IZE
-Add huitadmin as local admin (Password: H@rvard2021)
-Install SCCM (SCCM Agent - HUIT Toolkit)
-Run SCCM scans (HUIT Toolkit)
-Install Crowdstrike (via HUIT Toolkit)
-Install Bitlocker (via HUIT Toolkit)
-Join domain (HUIT Toolkit)
-Run updates/drivers via Microsoft etc. (This should be done if you ran the previous script)
-software center for Office, Adobe, Chrome/FF, Zoom, etc. (This should be done if you ran previous script)
-Run SCCM scans (HUIT Toolkit)
-If it is a new device, create a ticket with the “New Asset” template and fill in the template
-After all other steps go into settings and use this key to activate windows
-RN6KX-YDW86-634PD-HVVX2-J44CF
-
-_________________________________________________________________________
-
-Adding a Deployed Apple Device to ASM & JAMF:
-
-The first step for this will always be coordinating with the Senior Technician or Manager as they will be the only ones with the “Apple Configurator” app installed on their Harvard Managed iPhone with their Harvard Managed Apple ID.
-If the device is outside of Asset Management you should coordinate with Procurement and Refresh to accomplish this first and affix an asset tag.
-The next step is copying user profiles onto a temp storage device see attached KB article.
-After this, you can start managing the computer as outlined in the imaging guide at the bottom of this document. Make sure you have the senior technician or manager present for this and that they have with them the phone with Apple Configurator.
-Once you arrive at the “Country Selection” Bring the phone with the Apple configurator launched near the computer to kick off the enrollment process. This will trigger several prompts on both the phone and Mac.
-The rest of the image will run as usual.
-You can then copy data over to the Mac before referencing the same document in step 3.
-The final step is reconnecting to Harvard Secure and Executing this command:
-sudo profiles renew -type enrollment
-You should then follow up on the Jamf portal to confirm that the profile was wicked up. If not you should follow up with the senior technician or manager with Apple configurator.
-
-
-_________________________________________________________________________
 
 How to check the progress of Bitlocker Encryption:
 In CMD (run as admin): manage-bde -status
-_________________________________________________________________________
 
-Tom Hood Tickets:
-Date - Computer name  •  Serial •  Model
-🔥  JAMF:  “The problem if it exists” This command usually fixes all jam problems
-(sudo profiles renew -type enrollment)
-✅  Falcon/CrowdStrike: “The problem if it exists”
-🔥  CrashPlan:  “The problem if it exists”
-👉🏼  “Tips for solving”
-
-
-_________________________________________________________________________
-
-How to connect to a shared drive on Apple (Server)
+How to connect to a shared drive on Apple (Server):
 Finder > Go > Connect to Server
 Finder > Command + K
-_________________________________________________________________________
 
 Jamf Imaging log (MAC):
 Finder > Go > Go to Folder > /private/var/log/jamf.log > Open
-_________________________________________________________________________
 
-Installing Crowd Strike On Ubuntu
+[SECTION: INSTALLATION GUIDES]
+Installing Windows 11 from Boot media to HUITIZE:
+1. Connect device to charger and internet (preferably through a dock), and connect a USB with Windows 11 installation media
+2. Enter BIOS settings by pressing F12 on startup
+3. Choose from a USB
+4. Pick the drive connected to the device
+5. Go through the Windows 11 install process
+6. Insert product key if possible (if not, bypass and continue with limited setup)
+7. Choose Windows 11 Pro (unless specified otherwise)
+8. For traditional Windows 11 setup, disconnect from internet to avoid forcing a sign-in email
+9. Disconnect the USB to avoid installation cycle lock
+10. Choose all default options, skip anything optional
+11. If asked to connect to wifi without a skip option, press Shift + F10 to open Command Prompt
+12. Type "OOBE\BYPASSNRO" and press Enter
+13. The device will restart; repeat Windows 11 setup
+14. At wifi setup, choose to skip and continue setup "with limited access"
+15. For name and password, use: Name: huitadmin, Password: H@rvard2021
+16. Security Questions: All answers are "Harvard"
+17. Windows will boot up for you to start HUITizing
 
-Presetup
+"Huitize" It (Windows Machine):
+1. Download both the .ps1 file and the .bat file from the provided link
+2. Run the .bat file to install HUIT toolkit, Chrome, Firefox, Adobe, and Office 365
+3. Enter yes (Y) for all prompts to install applications
+4. Complete the automatically opened steps (Harvard VPN, Harvard Zoom, Windows updates)
+5. Add huitadmin as local admin (Password: H@rvard2021)
+6. Install SCCM (SCCM Agent - HUIT Toolkit)
+7. Run SCCM scans (HUIT Toolkit)
+8. Install Crowdstrike (via HUIT Toolkit)
+9. Install Bitlocker (via HUIT Toolkit)
+10. Join domain (HUIT Toolkit)
+11. Run updates/drivers via Microsoft
+12. Check software center for Office, Adobe, Chrome/FF, Zoom, etc.
+13. Run SCCM scans again (HUIT Toolkit)
+14. For new devices, create a ticket with the "New Asset" template
+15. Use this key to activate windows: RN6KX-YDW86-634PD-HVVX2-J44CF
 
-Make sure ethernet and power supply are connected to the device
-Download the package onto the device from https://agents.itsec.harvard.edu/
-Make sure to select the correct version for your OS
-VPN has to be on to open this link (gencom is the recommended tunnel)
-Set the folder as executable
+Installing Crowd Strike On Ubuntu:
+1. Connect ethernet and power supply
+2. Download package from https://agents.itsec.harvard.edu/ (VPN required)
+3. Set folder as executable
+4. Open Falcon-Sensor package: sudo dpkg -i falcon-sensor_7.02.0-15705_amd64.deb
+5. Start Falcon-Sensor: sudo systemctl start falcon-sensor
+6. Check status: systemctl status falcon-sensor
+7. Bind Falcon-Sensor: /opt/CrowdStrike/falconctl -s --cid 0da990e0888a4fe5a58b65cb0afe9c39
+8. Check status again to confirm it's running
 
-Right-click on the file and press the option to make it executable
-If that is not possible, you can also run the command “chmod u+x (filename)” through the terminal (which can be found in the application list) to use the file in the terminal for the following steps
+Adding a Deployed Apple Device to ASM & JAMF:
+1. Coordinate with Senior Technician or Manager (they have Apple Configurator on Harvard Managed iPhone)
+2. Ensure device is in Asset Management and has an asset tag
+3. Copy user profiles onto temp storage device
+4. Start managing computer as per imaging guide
+5. At "Country Selection," use Apple Configurator to start enrollment
+6. Complete image as usual
+7. Copy data to Mac
+8. Reconnect to Harvard Secure and execute: sudo profiles renew -type enrollment
+9. Confirm profile in Jamf portal
 
-Opening Falcon-Sensor Package
+[SECTION: DEPLOYMENT CHECKLIST]
+For MacOS AND Windows:
+1. Add Printers that may be used
+2. Check Adobe account (Mostly for FAS)
+3. Install Crash Plan
+4. Assign Computer to User's Net ID in Jamf
 
-To open up the Falcon-Sensor package, use the following code in the terminal:
-sudo dpkg -i falcon-sensor_7.02.0-15705_amd64.deb
-Note: The section “falcon-sensor_7.02.0-15705_amd64” is the package name and should be checked to make sure the name is properly written in the terminal
-You can also drag the file into the terminal after the “-i”
+[SECTION: MAC IMAGING PROCESS]
+1. Identify Computer:
+   - Check 2-week quarantine period on RE-deploy sheet
+   - Note Serial # on laptop bottom
 
-Starting Falcon-Sensor
+2. Look Up Serial #:
+   - Ensure device is in Jamf Prestage Enrollment
+   - Check Asset Track for "Stockroom" (update to 28 Travis St. if needed)
 
-To start the Falcon-Sensor application, use the following code in the terminal:
-sudo systemctl start falcon-sensor
-Note: The section “falcon-sensor” is the name of the application and should be checked to make sure the name is properly written in the terminal
-Check to see if Falcon-Sensor is properly running. This is done by checking on the status using the following code in the terminal:
-systemctl status falcon-sensor
-When entered, will check to see if the application is properly running, and will say that the application needs to be bound (will be done in the next step)
+3. Turn ON Apple Computer:
+   - Intel Processors: Press and hold COMMAND+R until slow status bar appears
+   - M1/M2 Processors: Press and hold Power button until "Continue holding for startup options..."
 
+4. Internet Recovery:
+   - Choose Options
+   - Select HUITADMIN (Password: D33p $p@c3)
 
-Binding Falcon-Sensor
+5. In Disk Utility:
+   - Show All Devices (View menu)
+   - Highlight top level of Hard Drive (Macintosh HD)
+   - Click Erase
+   - Name: Macintosh HD, Format: APFS, Scheme: GUID Partition Map
 
+6. If Find My Device is not removed:
+   - Refer to KB0020270 in SNOW to REMOVE Activation Lock
+   - Submit SNOW ticket to ESM for Apple Support assistance if needed
 
-Binding Falcon-Sensor connects the version of Crowdstrike installed on the machine with the HUIT management server
-Bind Falcon-Sensor using the following code in the terminal:
-/opt/CrowdStrike/falconctl -s --cid 0da990e0888a4fe5a58b65cb0afe9c39
-Note: The section “0da990e0888a4fe5a58b65cb0afe9c39” is the CID for General. While for SEAS techs this is the most common, make sure you know ahead of time whether you are using SEAS or General CID. Refer to the agents.itsec website if you need to search for the needed CID
-If this is a Crowd Strike Install for a PHD or Research / Hilary Corbett, SEAS Computing Security Check ticket you must use the GENERAL CID
-Once entered, Falcon-Sensor should be up and properly running. Check by running the status code again
-_________________________________________________________________________
+7. Once Wiped:
+   - Close window and return to Disk Utility
+   - Choose Reinstall MacOS
 
-Recovery of Data from User Profile, using HUIT ADMIN, on Mac
-Log In to HUIT ADMIN
+8. Provisioning Process:
+   - Country Select: United States
+   - Accessibility Options: Not now
+   - Remote Management: Continue
+   - Data and Privacy: Continue
+   - Migration Assistant: Not now
+   - Apple ID: Set up later, then Skip
+   - Terms and Conditions: Agree twice
+   - Location Services: Don't use, set time zone manually
+   - HUIT ADMIN Account: Username: huitadmin, Password: D33p $p@c3
+   - Analytics: Uncheck box, Continue
+   - Screen Time: Set Up Later
+   - Siri: Uncheck box
+   - Touch ID: Set Up Touch ID Later
+   - Choose Your Look: Light, Continue
+   - Express Set Up: Continue if prompted
 
-Finder > Go > Computer > Macintosh HD > Users > “USER” > Command + I OR Get Info > Unlock > Change staff access to read and write > (...) dropdown > Apply to closed Items > “Items will now start unlocking” > Get Disired Data
+9. HUITADMIN Desktop:
+   - DISABLE WIFI
+   - Update computer name in System Preferences
+   - Respond to on-screen prompts (Keychain, Zoom, Cisco AnyConnect)
+   - Complete Privacy & Security settings
+   - Install Software Updates
+   - Enable FileVault (laptops only)
 
+10. Final Steps:
+    - Run Terminal commands:
+      sudo jamf -recon
+      sudo jamf -policy
+    - Drag installed applications to taskbar
+    - Upgrade to latest Harvard-approved MacOS if needed
+    - Remove tags/stickers, clean and polish
+    - Complete KB0020436
+    - Re-box with new barcode label, note S/N & Model
+    - Mark as IM/UP and date stamp
+    - Place in designated area for RE-deploy machines
 
-_________________________________________________________________________
-Applying Images to Computers
-Overview
-The processes below outline the steps needed to image Dell and Apple computers, as well as other custom models. These steps can only be used with Windows on Dell / HP / ThinkPad / Custom Build, and MacOS on all Apple Computers. If you are doing a Dual Boot Linux / Windows it is important to follow these steps and add the Linux after to avoid the Harvard Windows Image cannibalizing the Linux part of the drive. For a stand-alone Linux install please follow the steps to HUITIZE above after the Linux install is complete
-Windows Devices
-Initial Setup
-Open Box:
-Connect to a Spare Bench charger (laptops only) – No need to take out the new charger from the laptop box.
-Affix Correct Asset Tag:
-H-tag or F-tag.
-Update Asset Track immediately to ensure accounting.
-Affix Labels:
-FYXXQX label (FAS) or a P-Touch lease label (CA).
-Match what the outer box reads on the white label – ask if unsure.
-Connect Ethernet:
-Connect a Dell USB-C to an Ethernet adapter with an Ethernet cable (laptops only, some laptops have onboard Ethernet).
-BIOS Configuration
-Turn on the computer and press F12 to enter the pre-boot menu.
-Make sure the advanced Bios Confuguretions are enabled
-Skip BIOS Settings Config: Jump down to “From left-side, UEFI...” – Choose IPV4.
-Enter BIOS/BIOS SETUP: Make the following changes from the left-hand menus:
-Boot Configuration: Secure Boot should always be on. If off, turn on.
-Integrated Devices: Enable Thunderbolt Technology Support, Thunderbolt Boot Support, & Thunderbolt (and PCIe behind TBT) preboot modules.
-Storage: Choose AHCI/NVMe.
-Connection: Turn on Enable UEFI Network Stack (if not on).
-Power: Turn on USB PowerShare.
-Update, Recovery:
-Turn off SupportAssist OS Recovery.
-Turn off BIOSConnect.
-Turn off Dell Auto OS Recovery Threshold.
-Click Apply Changes.
-Click Exit; computer reboots – Immediately press F12 to enter the pre-boot menu.
-Skip BIOS Settings Config: Proceed to IPv4 - continue below.x
-Imaging Process
-From left-side, UEFI Boot Devices menu, choose:
-USB NIC (IPV4) (if using USB-C Adapter) or Onboard NIC (IPV4) (for Ethernet only).
-Network Boot:
-The computer tries to reach the SCCM Image Server – be ready to hit ENTER when it says:
-Press ‘Enter’ for network boot service.
-Loading:
-It now says: Loading files… IP: 10/248.100.186 (at bottom).
-A blue screen appears – answer Yes, 2 times, to wipe the hard drive.
-Dell Logo appears Harvard Shield appears, and then the User Login window appears.
-Login:
-Log in with your 3x3 Net ID username and HarvardKey password, e.g., abc123.
-Task Sequence:
-Task Sequence window appears – choose the correct image, FAS, CA, or Department*.
-*Departments with their image: HUDS, LASPAU, FAO, HCL, HSA, HUPress, OGC, SEAS.
-Click Next.
-Installation Progress:
-Installation Progress window will appear and imaging is running.
-Imaging run time is 45 min (desktops) to 1 hour+ (laptops) – once done, the computer will turn off completely.
-Installing Updates for Windows Computers
-With Image Complete:
-Turn the computer back on and you should be taken to the HUITADMIN login.
-Login as HUITADMIN:
-PW: H@rvard2021 – for Dells only.
-Dock / BitLocker:
-Connect a dock to the laptop before running DCU updates, to catch Dock related updates.
-HUIT Toolkit
-Open File Explorer, and click the View menu (top-left-center).
-Check the ‘Hidden Items’ checkbox (top-right banner).
-Click ‘This PC’ on the left side banner.
-Open Windows (C:); open ProgramData folder.
-Open the HUIT folder; copy the HUIT Tool Kit.
-Paste to Desktop.
-Dell Command Update:
-Click into the text box, type ‘Dell’ – use the down-arrow key once to see Dell Command Update (DCU).
-Click Run; the installer window appears; once complete, it shows as complete in the HUIT Tool Kit.
-Go to Windows Search (bottom-left); type ‘Dell’ and open Dell Command Update.
-Click OK at the first prompt and then click Check to download updates; check the box to auto-restart after updates are installed and click Install when ready.
-Restart the computer as often as DCU asks you to; keep checking for updates until none are left.
-Verify that Bitlocker Drive Encryption is on (Search: type ‘BIT’, choose ‘Manage Bitlocker’).
-Bitlocker should show as on; close window.
-Domain Join:
-Use the Toolkit script, Domain Joining Utility, to join the device to the domain.
-Fill out the window and choose the specified group and department. Enter the new users' netID or 3x3 to make them an admin.
-SCCM:
-Double-click HUIT Toolkit, and click YES to the security prompt.
-Click into the text box, type ‘SCCM’ – use the down-arrow key 4 times to arrive at SCCM Client Scans – click Run.
-Start with the Discovery Data Collection scan – each scan turns Green when complete – complete all scans.
-Allow 10 minutes per scan & proceed, even if not green.
-Software Center:
-Open Software Center (type ‘soft’ in Search and choose Software Center).
-It should populate with applications since you’re running the SCCM Client Scans.
-If it doesn’t populate with applications – continue with SCCM Client Scans for a couple of rounds.
-Once applications populate in the Software Center, you can close it.
-If the Software Center isn’t cooperating – uninstall it, reboot, reinstall, reboot, and run SCCM Client scans again.
-To uninstall SCCM – use SCCM Agent in the HUIT Toolkit – choose CA or FAS users – see the prior bullet point.
-Final Steps:
-Once DCU updates are installed, pack up the computer, its charger (if it was used), and any associated peripherals.
-If you used a 28 Travis Bench charger, please put it back in the labeled drawer under our bench area.
-Re-box the computer, label it as IM/UP with your initials, date stamp it, and place it back on the stock shelf where it was, or place the bundle on the dolly if it is to be delivered, with correct labeling on all items for the user.
-If you place it on the dolly and/or if an Incident or TASK ticket is associated with it:
-Add a work note to the Incident/TASK ticket setting the expected date/time of delivery.
-Re-assign Incident/TASKS to the correct Field team so they can provide follow-up support.
-Update Serial # in Asset Track to – State: In Transit – Substate: Pending Install.
-Apple Computers
-Identify Computer:
-Ensure it is out of the 2-week quarantine period noted on the RE-deploy sheet attached to it.
-Note the Serial # on the bottom of the laptop, in case it does not match the RE-Deploy sheet label.
-Look Up Serial #:
-Make sure the device is in Jamf Prestage Enrollment and add it if not
-Check-in Asset Track to ensure that the ‘Stockroom’ is 28 Travis St.
-If it’s not 28 Travis St, update it to 28 Travis St. – State: In Stock / Substate: Available.
-Turn ON Apple Computer:
-Intel Processors: Press and hold COMMAND+R until you see a slow status bar loading, then let go of the keys.
-M1/M2 Processors: Press and hold the Power button until it says “Continue holding for startup options...”.
-You can let go of the Power button when it says “Loading Startup Options”.
-You will then see the Hard Drive appear and Options – choose Options.
-Choose HUITADMIN and enter the password D33p $p@c3
-Internet Recovery:
-This will display the Disk Utility window.
-Press Continue
-In Disk Utility:
-Under ‘Internal’, highlight the top level of the Hard Drive (Macintosh HD).
-Go to the View menu at the very top edge of the screen.
-Choose Show All Devices.
-In the Disk Utility window, click the Erase button (top-middle).
-At the next pop-up window, for ‘Name:’ – enter: Macintosh HD.
-‘Format’: APFS; ‘Scheme’: GUID Partition Map.
-Click Erase.
-Confirm Erase
-If the Apple ID password is prompted this means it is not removed from Find My Device
-If it won’t erase, seek guidance on what other actions can be taken.
-If it asks for a password for someone’s email account it notes on-screen:
-Refer to KB0020270 in SNOW to REMOVE the Find My Activation Lock.
-If Activation Lock remains – submit a SNOW ticket to ESM to have them remove it via Apple Support Find My Device cannot be removed any other way than through Apple, and it must be done via Apple support.
-RE-deploying/Re-provisioning:
-If you are RE-deploying an old machine or RE-provisioning a loaner – complete KB0020436 – find it in SNOW.
-Once Wiped:
-Close the window and return to the Disk Utility window in the background.
-Once “Your Mac is activated”, click “Exit to Recovery”
-Check JAMF online to ensure the computer serial # is assigned to the correct site for provisioning.
-Choose Reinstall MacOS, to reload the factory OS it came with.
-Remote Management provisioning pop-ups will begin after the OS install completes.
+[SECTION: WINDOWS IMAGING PROCESS]
+1. Initial Setup:
+   - Connect to spare bench charger (laptops)
+   - Affix correct Asset Tag (H-tag or F-tag)
+   - Update Asset Track
+   - Affix FYXXQX label (FAS) or P-Touch lease label (CA)
+   - Connect Ethernet
 
-Provisioning Process:
-Country Select Screen
-Select "United States."
-Accessibility Options
-Select "Not now."
-Remote Management
-Click "Continue" when the remote management window appears.
-Data and Privacy
-Click "Continue" when the Data and Privacy window appears.
-Migration Assistant
-Select "Not now" on the Migration Assistant window.
-Apple ID
-Select "Set up later" when asked for Apple ID.
-Press "Skip" when the window pops up.
-Terms and Conditions
-Press "Agree" twice.
-Location Services
-Click "Continue" on the Enable Location Services window.
-Confirm with "Don't use."
-Set the time zone manually.
-HUIT ADMIN Account Creation
-Username: huitadmin
-Password: D33p $p@c3
-Analytics
-Uncheck the box to share crash and usage data.
-Click "Continue."
-Screen Time
-Choose "Set Up Later" (lower-left).
-Siri
-Uncheck the box.
-Do this with the user.
-Improve Siri & Dictation
-Choose "Not Now" and click "Continue."
-Touch ID
-Choose "Set Up Touch ID Later" (lower-left).
-Choose Your Look
-Leave it on "Light."
-Click "Continue."
-Terms and Conditions
-If prompted, choose "Agree."
-For the next pop-up prompt, choose "Agree."
-Express Set Up
-If prompted, click "Continue."
-True Tone Display
-If prompted, click "Continue."
-HUITADMIN Desktop
-Once you arrive at the HUITADMIN Desktop, DISABLE WIFI.
-Open System Preferences.
-Open General preferences (on the left).
-Choose "About" (on the right).
-Copy the Serial Number (5th line down).
-Update the name to XXX(Acronym for Department)-[Computer Name, Ex; if the name is Jason Dank Computer name is JDANK-1 ], and hit Enter to save.
-Confirm in General / Sharing preferences that the Local hostname is updated to the same name.
-Close System Preferences.
-Begin responding to prompts on the screen.
-Keychain
-If "Keychain cannot be found to store 'Zoom'" pops up, click "Reset to Default."
-Zoom will eventually open.
-Cisco AnyConnect
-Click "Open Preferences" when prompted.
-It opens directly to Privacy & Security.
-Scroll down until you see the system software from the application "Cisco AnyConnect Socket Filter."
-Click "Allow" and enter the password for HUITADMIN.
-Click "Allow" for any additional prompts (some in the upper-right).
-Scroll up in Privacy & Security and choose "Full Disk Access."
-Turn ON any buttons seen here, entering the password for HUITADMIN if needed for each button.
-On-Screen Prompts
-Complete all on-screen prompts.
-Move System Preferences to the lower-right of the screen to monitor any further prompts.
-Applications
-Open the Applications window to view applications being installed and verify them visually.
-Software Update
-Go to General on the left side of System Preferences.
-Check for Software Updates and install any updates.
-Encryption (Laptops only)
-In System Preferences, open the Privacy & Security preferences.
-Scroll down to FileVault (Laptops only; Desktops are not encrypted).
-Click "Turn On."
-Choose to store the recovery key on the Harvard JAMF server.
-Enter the HUITADMIN password to complete.
-Confirm "A recovery key has been set."
-19. Mac Imaging Final Steps:
-Open Terminal
-Enter the first command: sudo jamf -recon
-Enter the HuitAdmin Password, which should be
-D33p $p@c3
-Allow All Popups (There will be many)
-Enter the second command: sudo jamf -policy
-Drag all installed applications to the taskbar for easy access, Ex: Outlook, Cisco Anyconnect, …
-What this does:
-Confirms that Jamf has sent down all the correct applications and policies
-This can often fix software not auto-installing
-This can be compared to SCCM client scans for Windows
-20. Final Steps
-If the latest MacOS is not installed, upgrade to the latest Harvard-approved MacOS.
-Remote Management pop-ups will repeat after any OS upgrade – complete them.
-Remove all tags and stickers, carefully using a flat new razor blade if needed.
-Clean and polish with alcohol wipes and the supplied purple towel.
-Ensure KB0020436 is complete.
-Re-box the machine with a new barcode label, noting the S/N & Model.
-Mark it as IM/UP and date stamp it.
-Place the machine on a designated shelf/area for RE-deploy machines – seek guidance if needed.
-      20. If Deploying(For MacOS AND Windows):
-Add Printers that may be used
-Check Adobe account (Mostly for FAS)
-Install Crash Plan
-Assign Computer to Users Net ID in Jamf
+2. BIOS Configuration:
+   - Press F12 to enter pre-boot menu
+   - Enable advanced BIOS configurations
+   - Make necessary changes (Secure Boot, Thunderbolt, Storage, etc.)
+   - Apply changes and exit
 
+3. Imaging Process:
+   - Choose USB NIC (IPV4) or Onboard NIC (IPV4)
+   - Press Enter for network boot service
+   - Answer Yes to wipe hard drive
+   - Log in with 3x3 Net ID username and HarvardKey password
+   - Choose correct image (FAS, CA, or Department)
+   - Wait for imaging to complete (45 min to 1 hour+)
 
+4. Installing Updates:
+   - Log in as HUITADMIN (PW: H@rvard2021)
+   - Connect dock to laptop
+   - Set up HUIT Toolkit
+   - Run Dell Command Update
+   - Verify Bitlocker Drive Encryption is on
+   - Join device to domain using Toolkit script
+   - Run SCCM Client Scans
+   - Check Software Center for applications
+   - Complete final steps (packing, labeling, updating Asset Track)
 
+[SECTION: DATA RECOVERY]
+Recovery of Data from User Profile, using HUIT ADMIN, on Mac:
+1. Log in to HUIT ADMIN
+2. Finder > Go > Computer > Macintosh HD > Users > "USER"
+3. Command + I OR Get Info
+4. Unlock
+5. Change staff access to read and write
+6. (...) dropdown > Apply to closed Items
+7. Wait for items to unlock
+8. Get desired data
 
+[SECTION: TICKET MANAGEMENT]
+Tom Hood Tickets Format:
+Date - Computer name • Serial • Model
+🔥 JAMF: "The problem if it exists" (sudo profiles renew -type enrollment)
+✅ Falcon/CrowdStrike: "The problem if it exists"
+🔥 CrashPlan: "The problem if it exists"
+👉🏼 "Tips for solving"
 
+[SECTION: LOANER REQUESTS]
+Science Center WISC Loaner Request:
+https://harvard.service-now.com/ithelp?id=sc_cat_item&sys_id=fc5cab849710ad509af6d804a253af0a
 
+[SECTION: ADDITIONAL RESOURCES]
+Author: Jason Dank - Technical Support Engineer Intern (Field Tech - Allston / SEAS)
+Contact: jason_dank@harvard.edu - Email with change requests
 
-
+[SECTION: DEPLOYMENT CHECKLIST]
+For MacOS AND Windows:
+1. Add Printers that may be used
+2. Check Adobe account (Mostly for FAS)
+3. Install Crash Plan
+4. Assign Computer to User's Net ID in Jamf
