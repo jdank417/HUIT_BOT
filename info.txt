@@ -58,7 +58,7 @@ Bombgar Remote Support (IT SIDE): https://harvardhuit.bomgarcloud.com/login/logi
 Bombgar Remote Support (CLIENT): https://harvardhuit.bomgarcloud.com/
 
 [SECTION: ACCOUNTS AND LICENSING]
-SEC Instructor Account: User: Instructor / Pass:150InstructSEAS
+SEC Instructor Account: (User: Instructor / Pass:150InstructSEAS)
 Adobe Administrative Console: https://adminconsole.adobe.com/4C5B21AC546A7FDF0A4C98C6@AdobeOrg/users
 
 [SECTION: ASSET MANAGEMENT]
@@ -70,28 +70,23 @@ HUIT Tools (NOC): https://tools.noc.harvard.edu/
 
 [SECTION: HELPFUL TIPS]
 Mac Terminal Show During OS install: Command + L (show log)
+Mac having trouble pulling Office(or any) applications from the jamf server: (Execute this command: sudo profiles renew -type enrollment)
+How to check the progress of Bitlocker Encryption: In CMD (run as admin): manage-bde -status
 
-Mac having trouble pulling Office(or any) applications from the jamf server:
-Execute this command: sudo profiles renew -type enrollment
-
-Reinstall / Repair Jamf Profile:
+[SECTION: Reinstall / Repair Jamf Profile]
 https://casper01.cadm.harvard.edu:8443/enroll/
 Sign in with your ADID/NetID on the actual computer you want it installed on
 Use their ADID to assign to
 Choose Athletics (or proper enrollment profile)
 
-How to check the progress of Bitlocker Encryption:
-In CMD (run as admin): manage-bde -status
-
-How to connect to a shared drive on Apple (Server):
+[SECTION: How to connect to a shared drive on Apple (Server)]
 Finder > Go > Connect to Server
 Finder > Command + K
 
-Jamf Imaging log (MAC):
+[SECTION: Jamf Imaging log (MAC)]
 Finder > Go > Go to Folder > /private/var/log/jamf.log > Open
 
-[SECTION: INSTALLATION GUIDES]
-Installing Windows 11 from Boot media to HUITIZE:
+[SECTION: Installing Windows 11 from Boot media to HUITIZE]
 1. Connect device to charger and internet (preferably through a dock), and connect a USB with Windows 11 installation media
 2. Enter BIOS settings by pressing F12 on startup
 3. Choose from a USB
@@ -110,7 +105,7 @@ Installing Windows 11 from Boot media to HUITIZE:
 16. Security Questions: All answers are "Harvard"
 17. Windows will boot up for you to start HUITizing
 
-"Huitize" It (Windows Machine):
+[SECTION: HUITIZE]]
 1. Download both the .ps1 file and the .bat file from the provided link
 2. Run the .bat file to install HUIT toolkit, Chrome, Firefox, Adobe, and Office 365
 3. Enter yes (Y) for all prompts to install applications
@@ -127,7 +122,7 @@ Installing Windows 11 from Boot media to HUITIZE:
 14. For new devices, create a ticket with the "New Asset" template
 15. Use this key to activate windows: RN6KX-YDW86-634PD-HVVX2-J44CF
 
-Installing Crowd Strike On Ubuntu:
+[SECTION: Installing Crowd Strike On Ubuntu]
 1. Connect ethernet and power supply
 2. Download package from https://agents.itsec.harvard.edu/ (VPN required)
 3. Set folder as executable
@@ -137,7 +132,7 @@ Installing Crowd Strike On Ubuntu:
 7. Bind Falcon-Sensor: /opt/CrowdStrike/falconctl -s --cid 0da990e0888a4fe5a58b65cb0afe9c39
 8. Check status again to confirm it's running
 
-Adding a Deployed Apple Device to ASM & JAMF:
+[SECTION: Adding a Deployed Apple Device to ASM & JAMF]
 1. Coordinate with Senior Technician or Manager (they have Apple Configurator on Harvard Managed iPhone)
 2. Ensure device is in Asset Management and has an asset tag
 3. Copy user profiles onto temp storage device
@@ -148,44 +143,30 @@ Adding a Deployed Apple Device to ASM & JAMF:
 8. Reconnect to Harvard Secure and execute: sudo profiles renew -type enrollment
 9. Confirm profile in Jamf portal
 
-[SECTION: DEPLOYMENT CHECKLIST]
-For MacOS AND Windows:
-1. Add Printers that may be used
-2. Check Adobe account (Mostly for FAS)
-3. Install Crash Plan
-4. Assign Computer to User's Net ID in Jamf
-
 [SECTION: MAC IMAGING PROCESS]
 1. Identify Computer:
    - Check 2-week quarantine period on RE-deploy sheet
    - Note Serial # on laptop bottom
-
 2. Look Up Serial #:
    - Ensure device is in Jamf Prestage Enrollment
    - Check Asset Track for "Stockroom" (update to 28 Travis St. if needed)
-
 3. Turn ON Apple Computer:
    - Intel Processors: Press and hold COMMAND+R until slow status bar appears
    - M1/M2 Processors: Press and hold Power button until "Continue holding for startup options..."
-
 4. Internet Recovery:
    - Choose Options
    - Select HUITADMIN (Password: D33p $p@c3)
-
 5. In Disk Utility:
    - Show All Devices (View menu)
    - Highlight top level of Hard Drive (Macintosh HD)
    - Click Erase
    - Name: Macintosh HD, Format: APFS, Scheme: GUID Partition Map
-
 6. If Find My Device is not removed:
    - Refer to KB0020270 in SNOW to REMOVE Activation Lock
    - Submit SNOW ticket to ESM for Apple Support assistance if needed
-
 7. Once Wiped:
    - Close window and return to Disk Utility
    - Choose Reinstall MacOS
-
 8. Provisioning Process:
    - Country Select: United States
    - Accessibility Options: Not now
@@ -202,7 +183,6 @@ For MacOS AND Windows:
    - Touch ID: Set Up Touch ID Later
    - Choose Your Look: Light, Continue
    - Express Set Up: Continue if prompted
-
 9. HUITADMIN Desktop:
    - DISABLE WIFI
    - Update computer name in System Preferences
@@ -210,7 +190,6 @@ For MacOS AND Windows:
    - Complete Privacy & Security settings
    - Install Software Updates
    - Enable FileVault (laptops only)
-
 10. Final Steps:
     - Run Terminal commands:
       sudo jamf -recon
@@ -230,13 +209,11 @@ For MacOS AND Windows:
    - Update Asset Track
    - Affix FYXXQX label (FAS) or P-Touch lease label (CA)
    - Connect Ethernet
-
 2. BIOS Configuration:
    - Press F12 to enter pre-boot menu
    - Enable advanced BIOS configurations
    - Make necessary changes (Secure Boot, Thunderbolt, Storage, etc.)
    - Apply changes and exit
-
 3. Imaging Process:
    - Choose USB NIC (IPV4) or Onboard NIC (IPV4)
    - Press Enter for network boot service
@@ -244,7 +221,6 @@ For MacOS AND Windows:
    - Log in with 3x3 Net ID username and HarvardKey password
    - Choose correct image (FAS, CA, or Department)
    - Wait for imaging to complete (45 min to 1 hour+)
-
 4. Installing Updates:
    - Log in as HUITADMIN (PW: H@rvard2021)
    - Connect dock to laptop
@@ -256,7 +232,8 @@ For MacOS AND Windows:
    - Check Software Center for applications
    - Complete final steps (packing, labeling, updating Asset Track)
 
-[SECTION: DATA RECOVERY]
+
+[SECTION: MAC DATA RECOVERY]
 Recovery of Data from User Profile, using HUIT ADMIN, on Mac:
 1. Log in to HUIT ADMIN
 2. Finder > Go > Computer > Macintosh HD > Users > "USER"
@@ -267,8 +244,7 @@ Recovery of Data from User Profile, using HUIT ADMIN, on Mac:
 7. Wait for items to unlock
 8. Get desired data
 
-[SECTION: TICKET MANAGEMENT]
-Tom Hood Tickets Format:
+[SECTION: Tom Hood Tickets Format:]
 Date - Computer name • Serial • Model
 🔥 JAMF: "The problem if it exists" (sudo profiles renew -type enrollment)
 ✅ Falcon/CrowdStrike: "The problem if it exists"
@@ -279,12 +255,12 @@ Date - Computer name • Serial • Model
 Science Center WISC Loaner Request:
 https://harvard.service-now.com/ithelp?id=sc_cat_item&sys_id=fc5cab849710ad509af6d804a253af0a
 
-[SECTION: ADDITIONAL RESOURCES]
+[SECTION: Author and Contact Information]
 Author: Jason Dank - Technical Support Engineer Intern (Field Tech - Allston / SEAS)
 Contact: jason_dank@harvard.edu - Email with change requests
 
 [SECTION: DEPLOYMENT CHECKLIST]
-For MacOS AND Windows:
+For macOS AND Windows:
 1. Add Printers that may be used
 2. Check Adobe account (Mostly for FAS)
 3. Install Crash Plan
