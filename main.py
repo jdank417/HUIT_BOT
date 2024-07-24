@@ -6,7 +6,8 @@ from rapidfuzz import fuzz, process
 import asyncio
 import textwrap
 import customtkinter as ctk
-from PIL import Image, ImageTk
+from PIL import Image
+from customtkinter import CTkImage
 
 # Load models
 nlp = spacy.load('en_core_web_sm')
@@ -27,17 +28,14 @@ chunk_entities = [[(ent.text.lower(), ent.label_) for ent in nlp(chunk).ents] fo
 MAX_RESULTS = 1
 MAX_CHUNK_LENGTH = sys.maxsize  # Maximum length of each returned chunk
 
-
 def summarize_chunk(chunk):
     if len(chunk) > MAX_CHUNK_LENGTH:
         return textwrap.shorten(chunk, width=MAX_CHUNK_LENGTH, placeholder="...")
     return chunk
 
-
 async def search_text_with_fuzzy(query):
     results = process.extract(query, chunks, limit=MAX_RESULTS, scorer=fuzz.partial_ratio)
     return [result[0] for result in results if result[1] > 70]
-
 
 async def search_text_with_ner(query):
     doc = nlp(query)
@@ -45,14 +43,12 @@ async def search_text_with_ner(query):
     return [chunk for chunk, entities in zip(chunks, chunk_entities) if query_entities.intersection(entities)][
            :MAX_RESULTS]
 
-
 async def search_text_with_bert(query):
     query_embedding = model.encode(query, convert_to_tensor=True)
     similarities = util.pytorch_cos_sim(query_embedding, chunk_embeddings)[0]
     top_k = min(MAX_RESULTS, len(chunks))
     top_results = torch.topk(similarities, k=top_k)
     return [chunks[idx] for idx in top_results[1]]
-
 
 async def get_response(message):
     message = message.lower()
@@ -73,7 +69,6 @@ async def get_response(message):
     else:
         return 'I didn\'t understand that. Please provide more details or ask a question.'
 
-
 def send_message(event=None):
     user_message = user_input.get()
     if user_message:
@@ -81,11 +76,9 @@ def send_message(event=None):
         user_input.set("")
         asyncio.run(process_user_message(user_message))
 
-
 async def process_user_message(message):
     response = await get_response(message)
     display_message(response, "bot")
-
 
 def display_message(message, sender):
     bubble_frame = ctk.CTkFrame(chat_log_frame, corner_radius=10, fg_color="#DDDDDD" if sender == "bot" else "#780606")
@@ -102,7 +95,6 @@ def display_message(message, sender):
     chat_log_frame.update_idletasks()  # Update layout after packing
     chat_log_canvas.yview_moveto(1.0)  # Scroll to the bottom
 
-
 # Set up the GUI
 ctk.set_appearance_mode("System")  # Modes: system (default), light, dark
 ctk.set_default_color_theme("blue")  # Themes: blue (default), dark-blue, green
@@ -111,10 +103,10 @@ root = ctk.CTk()
 root.title("Optimist Optimizer")
 root.geometry("600x600")
 
-# Load and set the logo
+# Load and set the logo using CTkImage
 logo_image = Image.open('HUITLogo.png')  # Path to your logo image
 logo_image = logo_image.resize((500, 80), Image.LANCZOS)  # Resize using LANCZOS resampling
-logo_photo = ImageTk.PhotoImage(logo_image)
+logo_photo = CTkImage(light_image=logo_image, dark_image=logo_image, size=(500, 80))
 
 header_frame = ctk.CTkFrame(root, height=100, bg_color="#780606")
 header_frame.pack(fill="x")
