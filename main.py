@@ -6,7 +6,7 @@ from rapidfuzz import fuzz, process
 import asyncio
 import textwrap
 import customtkinter as ctk
-from PIL import Image, ImageTk  # Correct import for resizing
+from PIL import Image, ImageTk
 
 # Load models
 nlp = spacy.load('en_core_web_sm')
