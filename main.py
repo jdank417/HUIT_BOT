@@ -1,3 +1,4 @@
+import sys
 import spacy
 from sentence_transformers import SentenceTransformer, util
 import torch
@@ -22,7 +23,7 @@ chunk_embeddings = model.encode(chunks, convert_to_tensor=True)
 chunk_entities = [[(ent.text.lower(), ent.label_) for ent in nlp(chunk).ents] for chunk in chunks]
 
 MAX_RESULTS = 1
-MAX_CHUNK_LENGTH = 300  # Maximum length of each returned chunk
+MAX_CHUNK_LENGTH = sys.maxsize  # Maximum length of each returned chunk
 
 def summarize_chunk(chunk):
     if len(chunk) > MAX_CHUNK_LENGTH:

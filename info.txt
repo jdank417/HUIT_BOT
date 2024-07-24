@@ -143,95 +143,9 @@ Finder > Go > Go to Folder > /private/var/log/jamf.log > Open
 8. Reconnect to Harvard Secure and execute: sudo profiles renew -type enrollment
 9. Confirm profile in Jamf portal
 
-[SECTION: MAC IMAGING PROCESS]
-1. Identify Computer:
-   - Check 2-week quarantine period on RE-deploy sheet
-   - Note Serial # on laptop bottom
-2. Look Up Serial #:
-   - Ensure device is in Jamf Prestage Enrollment
-   - Check Asset Track for "Stockroom" (update to 28 Travis St. if needed)
-3. Turn ON Apple Computer:
-   - Intel Processors: Press and hold COMMAND+R until slow status bar appears
-   - M1/M2 Processors: Press and hold Power button until "Continue holding for startup options..."
-4. Internet Recovery:
-   - Choose Options
-   - Select HUITADMIN (Password: D33p $p@c3)
-5. In Disk Utility:
-   - Show All Devices (View menu)
-   - Highlight top level of Hard Drive (Macintosh HD)
-   - Click Erase
-   - Name: Macintosh HD, Format: APFS, Scheme: GUID Partition Map
-6. If Find My Device is not removed:
-   - Refer to KB0020270 in SNOW to REMOVE Activation Lock
-   - Submit SNOW ticket to ESM for Apple Support assistance if needed
-7. Once Wiped:
-   - Close window and return to Disk Utility
-   - Choose Reinstall MacOS
-8. Provisioning Process:
-   - Country Select: United States
-   - Accessibility Options: Not now
-   - Remote Management: Continue
-   - Data and Privacy: Continue
-   - Migration Assistant: Not now
-   - Apple ID: Set up later, then Skip
-   - Terms and Conditions: Agree twice
-   - Location Services: Don't use, set time zone manually
-   - HUIT ADMIN Account: Username: huitadmin, Password: D33p $p@c3
-   - Analytics: Uncheck box, Continue
-   - Screen Time: Set Up Later
-   - Siri: Uncheck box
-   - Touch ID: Set Up Touch ID Later
-   - Choose Your Look: Light, Continue
-   - Express Set Up: Continue if prompted
-9. HUITADMIN Desktop:
-   - DISABLE WIFI
-   - Update computer name in System Preferences
-   - Respond to on-screen prompts (Keychain, Zoom, Cisco AnyConnect)
-   - Complete Privacy & Security settings
-   - Install Software Updates
-   - Enable FileVault (laptops only)
-10. Final Steps:
-    - Run Terminal commands:
-      sudo jamf -recon
-      sudo jamf -policy
-    - Drag installed applications to taskbar
-    - Upgrade to latest Harvard-approved MacOS if needed
-    - Remove tags/stickers, clean and polish
-    - Complete KB0020436
-    - Re-box with new barcode label, note S/N & Model
-    - Mark as IM/UP and date stamp
-    - Place in designated area for RE-deploy machines
-
-[SECTION: WINDOWS IMAGING PROCESS]
-1. Initial Setup:
-   - Connect to spare bench charger (laptops)
-   - Affix correct Asset Tag (H-tag or F-tag)
-   - Update Asset Track
-   - Affix FYXXQX label (FAS) or P-Touch lease label (CA)
-   - Connect Ethernet
-2. BIOS Configuration:
-   - Press F12 to enter pre-boot menu
-   - Enable advanced BIOS configurations
-   - Make necessary changes (Secure Boot, Thunderbolt, Storage, etc.)
-   - Apply changes and exit
-3. Imaging Process:
-   - Choose USB NIC (IPV4) or Onboard NIC (IPV4)
-   - Press Enter for network boot service
-   - Answer Yes to wipe hard drive
-   - Log in with 3x3 Net ID username and HarvardKey password
-   - Choose correct image (FAS, CA, or Department)
-   - Wait for imaging to complete (45 min to 1 hour+)
-4. Installing Updates:
-   - Log in as HUITADMIN (PW: H@rvard2021)
-   - Connect dock to laptop
-   - Set up HUIT Toolkit
-   - Run Dell Command Update
-   - Verify Bitlocker Drive Encryption is on
-   - Join device to domain using Toolkit script
-   - Run SCCM Client Scans
-   - Check Software Center for applications
-   - Complete final steps (packing, labeling, updating Asset Track)
-
+[SECTION: IMAGING COMPUTERS]
+Please refer to the Document located here: https://docs.google.com/document/d/1Sn7T3OMWQm43Qxd7hR6Be0t0Q3otzeWV/edit?usp=sharing&ouid=101068923790311888269&rtpof=true&sd=true
+Scroll down to the section: "Applying images to Computers"
 
 [SECTION: MAC DATA RECOVERY]
 Recovery of Data from User Profile, using HUIT ADMIN, on Mac:
@@ -255,9 +169,8 @@ Date - Computer name • Serial • Model
 Science Center WISC Loaner Request:
 https://harvard.service-now.com/ithelp?id=sc_cat_item&sys_id=fc5cab849710ad509af6d804a253af0a
 
-[SECTION: Author and Contact Information]
-Author: Jason Dank - Technical Support Engineer Intern (Field Tech - Allston / SEAS)
-Contact: jason_dank@harvard.edu - Email with change requests
+[SECTION: How to Install SCCM]
+SCCM Agent in the Toolkit and select correct SCCM group.
 
 [SECTION: DEPLOYMENT CHECKLIST]
 For macOS AND Windows:
@@ -265,3 +178,7 @@ For macOS AND Windows:
 2. Check Adobe account (Mostly for FAS)
 3. Install Crash Plan
 4. Assign Computer to User's Net ID in Jamf
+
+[SECTION: Author and Contact Information]
+Author: Jason Dank - Technical Support Engineer Intern (Field Tech - Allston / SEAS)
+Contact: jason_dank@harvard.edu - Email with change requests
