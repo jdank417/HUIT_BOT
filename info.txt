@@ -1,4 +1,4 @@
-[SECTION: IMPORTANT LINKS]
+[SECTION: Harvard Key, VPN, Service Now, People Soft, Training Portal]
 Harvard Key: https://key.harvard.edu/
 Harvard Secure: https://getonline.harvard.edu/
 Harvard VPN: https://vpn.harvard.edu/
@@ -6,14 +6,14 @@ Service Now: https://harvard.service-now.com/nav_to.do?uri=%2Ftask_list.do%3Fsys
 People Soft: https://peoplesoft.hrapps.harvard.edu/psc/psprdaws/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
 Harvard Training Portal: https://trainingportal.harvard.edu/Saba/Web_spf/NA1PRD0068/app/dashboard
 
-[SECTION: SUPPORT RESOURCES]
+[SECTION: CrashPlan, Field Guide, BitLocker, USMT Data Migration Docs]
 CrashPlan WebPortal: https://console.us2.crashplan.com/login/#/login?to=%2Fapp%2F%23%2Fconsole%2Fdashboard
 CrashPlan Restore Instructions: https://harvard.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsysparm_article%3DKB0017874%26sysparm_rank%3D1%26sysparm_tsqueryId%3D4b12dd4c932ac2904567b1fd1dba1009
 Field Guide Knowledge Base: https://harvard.service-now.com/ithelp?id=kb_article&sys_id=0d76e109db710850dffdbc32ba9619f7#sccm
 BitLocker Recovery: https://uiswapps1000012.university.harvard.edu/helpdesk/
 USMT Data Migration Docs: https://harvard.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsys_kb_id%3Db048ce1f1b81fbc4efd8a79b2d4bcb9f
 
-[SECTION: SOFTWARE AND DOWNLOADS]
+[SECTION: Kensington Dock, FAS Software, HP Printer Driver, Dell Sound Card Diagnostic]
 Kensington Dock Software: https://www.synaptics.com/products/displaylink-graphics/downloads/macos
 FAS Software Download Page: https://huit.harvard.edu/fas-software-downloads
 HP Printer driver package from Apple: https://support.apple.com/en-us/106385
@@ -29,20 +29,20 @@ Fleet Management Maxwork Website: https://maxwork.campusservices.harvard.edu/emm
 Fleet Management Maxwork Server: https://maxwork.campusservices.harvard.edu/emmsso
 Fleet Management All Data: User: harv5589 / Pass: harv5589
 
-[SECTION: COMPUTER STANDARDS AND REPAIR]
+[SECTION: Dell Repair and Computer Standards]
 Computer Standards (Faculty / Staff): https://harvard.service-now.com/ithelp?id=sc_cat_item&sys_id=05d7a432dbacc7c083a2f3f7bf961977
 Dell Repair Email: support@dellfs.zendesk.com
 Dell Repair KB Article: https://harvard.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsys_kb_id%3D0e441be5dbf36414babda8dad3961980
 Dell Lookup: https://www.dell.com/support/home/en-us
 FAS Work Order: https://oprp.fas.harvard.edu/presto-2
 
-[SECTION: SECURITY AND MANAGEMENT]
+[SECTION: Crowd Strike, SCCM Multi Search, HUIT Laps, Jamf]
 Crowd Strike: https://agents.itsec.harvard.edu/
 SCCM Multi Search: http://huit-esm-sccm.cadm.harvard.edu/reports/report/ConfigMgr_ESM/.ESM%20Custom%20Reports/HUIT%20-%20Computer%20Details%20-%20Multi%20Search
 HUIT Laps: https://laps.university.harvard.edu/index.html
 Jamf: https://casper01.cadm.harvard.edu:8443/
 
-[SECTION: PRINTING]
+[SECTION: Crimson Print]
 CrimsonPrint Admin Portal: https://crimsonprint.huit.harvard.edu/admin
 Crimson Print POI HUID: 61559728 (Use only with explicit permission for registering Crimson Print Printers on the network)
 Crimson Print admin settings (ON PRINTER): Username: admin / Password: 31ElEngNJ7# (Consult Senior Tech or Manager before entering)
@@ -53,19 +53,19 @@ Harvard Athletics Staff Directory: https://gocrimson.com/staff-directory
 Harvard Shuttles: http://www.shuttle.harvard.edu/
 Harvard Interactive Map: https://mapprod.cadm.harvard.edu/portal/apps/indoors/index.html?appid=2c3969f8d1b14147920610a68f6db713#?n=1716909824833
 
-[SECTION: REMOTE SUPPORT]
+[SECTION: REMOTE SUPPORT, Bomgar]
 Bombgar Remote Support (IT SIDE): https://harvardhuit.bomgarcloud.com/login/login
 Bombgar Remote Support (CLIENT): https://harvardhuit.bomgarcloud.com/
 
-[SECTION: ACCOUNTS AND LICENSING]
+[SECTION: ACCOUNTS]
 SEC Instructor Account: (User: Instructor / Pass:150InstructSEAS)
 Adobe Administrative Console: https://adminconsole.adobe.com/4C5B21AC546A7FDF0A4C98C6@AdobeOrg/users
 
-[SECTION: ASSET MANAGEMENT]
+[SECTION: ASSET MANAGEMENT, MIDAS]
 AssetTrack: https://harvard.service-now.com/api/x_amiam_assettrack/atapi/FileService?/index.html#!/tasks
 MIDAS: https://midas.cadm.harvard.edu/menuHandler.do?target=search
 
-[SECTION: NETWORK TOOLS]
+[SECTION: Network Registration]
 HUIT Tools (NOC): https://tools.noc.harvard.edu/
 
 [SECTION: HELPFUL TIPS]
