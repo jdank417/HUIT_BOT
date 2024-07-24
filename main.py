@@ -100,7 +100,7 @@ ctk.set_appearance_mode("System")  # Modes: system (default), light, dark
 ctk.set_default_color_theme("blue")  # Themes: blue (default), dark-blue, green
 
 root = ctk.CTk()
-root.title("Optimist Optimizer")
+root.title("Optimistic Optimizer")
 root.geometry("600x600")
 
 # Load and set the logo using CTkImage
