@@ -2,7 +2,7 @@ import spacy
 from sentence_transformers import SentenceTransformer, util
 import torch
 from fuzzywuzzy import fuzz
-from fuzzywuzzy import process
+
 
 # Load the text file
 with open('info.txt', 'r', encoding='utf-8') as file:
