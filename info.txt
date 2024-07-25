@@ -6,14 +6,16 @@ Harvard Secure: https://getonline.harvard.edu/
 
 Harvard VPN: https://vpn.harvard.edu/
 
+Harvard Training Portal: https://trainingportal.harvard.edu/Saba/Web_spf/NA1PRD0068/app/dashboard
+
+
+[SECTION: IT Resources]
+
 Service Now: https://harvard.service-now.com/nav_to.do?uri=%2Ftask_list.do%3Fsysparm_query%3Dactive%3Dtrue%5Esys_class_name!%3Drm_product%5Estate!%3D106%5Eassigned_to%3Djavascript:getMyAssignments()%5Esys_class_name!%3Dpm_project%5Esys_class_name!%3Dpm_project_task%5EEQ%26sysparm_userpref_module%3Dbd4523722b6f4100245f47f217da1531%26sysparm_clear_stack%3Dtrue
 
 People Soft: https://peoplesoft.hrapps.harvard.edu/psc/psprdaws/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
 
-Harvard Training Portal: https://trainingportal.harvard.edu/Saba/Web_spf/NA1PRD0068/app/dashboard
-
 Adobe Administrative Console: https://adminconsole.adobe.com/4C5B21AC546A7FDF0A4C98C6@AdobeOrg/users
-
 
 
 [SECTION: Backup and Data Management]
@@ -21,8 +23,6 @@ Adobe Administrative Console: https://adminconsole.adobe.com/4C5B21AC546A7FDF0A4
 CrashPlan WebPortal: https://console.us2.crashplan.com/login/#/login?to=%2Fapp%2F%23%2Fconsole%2Fdashboard
 
 CrashPlan Restore Instructions: https://harvard.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsysparm_article%3DKB0017874%26sysparm_rank%3D1%26sysparm_tsqueryId%3D4b12dd4c932ac2904567b1fd1dba1009
-
-Field Guide Knowledge Base: https://harvard.service-now.com/ithelp?id=kb_article&sys_id=0d76e109db710850dffdbc32ba9619f7#sccm
 
 BitLocker Recovery: https://uiswapps1000012.university.harvard.edu/helpdesk/
 
@@ -50,6 +50,9 @@ Athletics IT Support Manual: https://harvard.service-now.com/ithelp?id=kb_articl
 
 Food Pro Knowledge Article: https://harvard.service-now.com/ithelp?id=kb_article&sys_id=KB0011045
 
+Field Guide Knowledge Base: https://harvard.service-now.com/ithelp?id=kb_article&sys_id=0d76e109db710850dffdbc32ba9619f7#sccm
+
+
 
 
 [SECTION: Fleet Management]
@@ -71,6 +74,10 @@ Dell Repair Email: support@dellfs.zendesk.com
 Dell Repair KB Article: https://harvard.service-now.com/nav_to.do?uri=%2Fkb_view.do?sys_kb_id%3D0e441be5dbf36414babda8dad3961980
 
 Dell Lookup: https://www.dell.com/support/home/en-us
+
+
+
+[SECTION: FAS Work Order]
 
 FAS Work Order: https://oprp.fas.harvard.edu/presto-2
 
@@ -165,6 +172,13 @@ Choose Athletics (or proper enrollment profile)
 Finder > Go > Connect to Server
 
 Finder > Command + K
+
+
+[SECTION: Google shared drives]
+
+Google Shared Drive Request Form: https://harvard.service-now.com/ithelp?id=sc_cat_item&sys_id=432cd3a9db9bce10bfdbc34813961958
+
+Google Shared Drive KB Article: https://harvard.service-now.com/now/nav/ui/classic/params/target/kb_view.do%3Fsysparm_article%3DKB0014205
 
 
 
