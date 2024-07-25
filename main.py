@@ -8,6 +8,8 @@ import textwrap
 import customtkinter as ctk
 from PIL import Image
 from customtkinter import CTkImage
+import random
+import re
 
 # Load models
 nlp = spacy.load('en_core_web_sm')
@@ -28,20 +30,40 @@ chunk_entities = [[(ent.text.lower(), ent.label_) for ent in nlp(chunk).ents] fo
 MAX_RESULTS = 1
 MAX_CHUNK_LENGTH = sys.maxsize  # Maximum length of each returned chunk
 
+conversation_context = []
+
+
 def summarize_chunk(chunk):
     if len(chunk) > MAX_CHUNK_LENGTH:
         return textwrap.shorten(chunk, width=MAX_CHUNK_LENGTH, placeholder="...")
     return chunk
 
+
+def process_response(response):
+    # Capitalize the first letter of each sentence
+    response = '. '.join(sentence.capitalize() for sentence in response.split('. '))
+
+    # Remove multiple spaces
+    response = re.sub(' +', ' ', response)
+
+    # Add a friendly opener
+    openers = ["I hope this helps! ", "Here's what I found: ", "Let me share this with you: "]
+    response = random.choice(openers) + response
+
+    return response
+
+
 async def search_text_with_fuzzy(query):
     results = process.extract(query, chunks, limit=MAX_RESULTS, scorer=fuzz.partial_ratio)
     return [result[0] for result in results if result[1] > 70]
+
 
 async def search_text_with_ner(query):
     doc = nlp(query)
     query_entities = set((ent.text.lower(), ent.label_) for ent in doc.ents)
     return [chunk for chunk, entities in zip(chunks, chunk_entities) if query_entities.intersection(entities)][
            :MAX_RESULTS]
+
 
 async def search_text_with_bert(query):
     query_embedding = model.encode(query, convert_to_tensor=True)
@@ -50,7 +72,10 @@ async def search_text_with_bert(query):
     top_results = torch.topk(similarities, k=top_k)
     return [chunks[idx] for idx in top_results[1]]
 
+
 async def get_response(message):
+    global conversation_context
+
     message = message.lower()
     if '?' in message or len(message.split()) > 2:
         query = message
@@ -63,11 +88,24 @@ async def get_response(message):
         combined_results = list(set(fuzzy_results + ner_results + bert_results))[:MAX_RESULTS]
         if combined_results:
             summarized_results = [summarize_chunk(chunk) for chunk in combined_results]
-            return f'The information related to "{query}" is as follows:\n' + '\n\n'.join(summarized_results)
+            info = ' '.join(summarized_results)
+
+            # Check if this information was already provided
+            if info in conversation_context:
+                response = "I've mentioned this before, but just to reiterate: " + info
+            else:
+                response = process_response(info)
+                conversation_context.append(info)
+
+            # Limit the context to the last 5 exchanges
+            conversation_context = conversation_context[-5:]
+
+            return response
         else:
-            return f'I could not find information related to "{query}".'
+            return "I'm afraid I don't have any new information about that. Is there something else you'd like to know?"
     else:
-        return 'I didn\'t understand that. Please provide more details or ask a question.'
+        return "I'm here to help! Could you please ask a more specific question or provide more details?"
+
 
 def send_message(event=None):
     user_message = user_input.get()
@@ -76,9 +114,14 @@ def send_message(event=None):
         user_input.set("")
         asyncio.run(process_user_message(user_message))
 
+
 async def process_user_message(message):
+    global conversation_context
+    conversation_context.append(f"User: {message}")
     response = await get_response(message)
+    conversation_context.append(f"Bot: {response}")
     display_message(response, "bot")
+
 
 def display_message(message, sender):
     bubble_frame = ctk.CTkFrame(chat_log_frame, corner_radius=10, fg_color="#DDDDDD" if sender == "bot" else "#780606")
@@ -94,6 +137,7 @@ def display_message(message, sender):
 
     chat_log_frame.update_idletasks()  # Update layout after packing
     chat_log_canvas.yview_moveto(1.0)  # Scroll to the bottom
+
 
 # Set up the GUI
 ctk.set_appearance_mode("System")  # Modes: system (default), light, dark
