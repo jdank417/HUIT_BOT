@@ -10,6 +10,7 @@ from PIL import Image, ImageTk
 import random
 import re
 import tkinter as tk
+from customtkinter import CTkToplevel, CTkTextbox
 
 # Load models
 nlp = spacy.load('en_core_web_sm')
@@ -42,12 +43,10 @@ MAX_CHUNK_LENGTH = sys.maxsize  # Maximum length of each returned chunk
 
 conversation_context = []
 
-
 def summarize_chunk(chunk):
     if len(chunk) > MAX_CHUNK_LENGTH:
         return textwrap.shorten(chunk, width=MAX_CHUNK_LENGTH, placeholder="...")
     return chunk
-
 
 def process_response(response):
     # Capitalize the first letter of each sentence
@@ -62,20 +61,16 @@ def process_response(response):
 
     return response
 
-
 async def search_text_with_fuzzy(query):
     if chunks:
         results = process.extract(query, chunks, limit=MAX_RESULTS, scorer=fuzz.partial_ratio)
         return [result[0] for result in results if result[1] > 70]
     return []
 
-
 async def search_text_with_ner(query):
     doc = nlp(query)
     query_entities = set((ent.text.lower(), ent.label_) for ent in doc.ents)
-    return [chunk for chunk, entities in zip(chunks, chunk_entities) if query_entities.intersection(entities)][
-           :MAX_RESULTS]
-
+    return [chunk for chunk, entities in zip(chunks, chunk_entities) if query_entities.intersection(entities)][:MAX_RESULTS]
 
 async def search_text_with_bert(query):
     if chunk_embeddings.size(0) > 0:
@@ -85,7 +80,6 @@ async def search_text_with_bert(query):
         top_results = torch.topk(similarities, k=top_k)
         return [chunks[idx] for idx in top_results[1]]
     return []
-
 
 async def get_response(message):
     global conversation_context
@@ -120,7 +114,6 @@ async def get_response(message):
     else:
         return "I'm here to help! Could you please ask a more specific question or provide more details?"
 
-
 def send_message(event=None):
     user_message = user_input.get()
     if user_message:
@@ -128,14 +121,12 @@ def send_message(event=None):
         user_input.set("")
         asyncio.run(process_user_message(user_message))
 
-
 async def process_user_message(message):
     global conversation_context
     conversation_context.append(f"User: {message}")
     response = await get_response(message)
     conversation_context.append(f"Bot: {response}")
     display_message(response, "bot")
-
 
 def display_message(message, sender):
     chat_log_text.config(state=tk.NORMAL)  # Enable editing to insert new messages
@@ -148,6 +139,44 @@ def display_message(message, sender):
     chat_log_text.config(state=tk.DISABLED)  # Disable editing to make it read-only
     chat_log_text.yview(tk.END)  # Scroll to the bottom
 
+def add_new_information():
+    def save_info():
+        title = title_entry.get().strip()
+        details = details_text.get("1.0", tk.END).strip()
+        if title and details:
+            with open('info.txt', 'a', encoding='utf-8') as file:
+                file.write(f"\n[SECTION: {title}]\n{details}\n")
+            new_window.destroy()
+            # Reload the text data and update embeddings
+            reload_text_data()
+
+    new_window = CTkToplevel(root)
+    new_window.title("Add New Information")
+    new_window.geometry("400x400")
+
+    title_label = ctk.CTkLabel(new_window, text="Title:")
+    title_label.pack(pady=(10, 0), padx=10, anchor="w")
+
+    title_entry = ctk.CTkEntry(new_window, width=380)
+    title_entry.pack(pady=(0, 10), padx=10)
+
+    details_label = ctk.CTkLabel(new_window, text="Details:")
+    details_label.pack(pady=(10, 0), padx=10, anchor="w")
+
+    details_text = CTkTextbox(new_window, width=380, height=250)
+    details_text.pack(pady=(0, 10), padx=10)
+
+    save_button = ctk.CTkButton(new_window, text="Save", command=save_info)
+    save_button.pack(pady=10)
+
+def reload_text_data():
+    global text, chunks, chunk_embeddings, chunk_entities
+    with open('info.txt', 'r', encoding='utf-8') as file:
+        text = file.read().strip()
+    chunks = text.split('[SECTION:')
+    chunks = ['[SECTION:' + chunk.strip() for chunk in chunks if chunk.strip()]
+    chunk_embeddings = model.encode(chunks, convert_to_tensor=True)
+    chunk_entities = [[(ent.text.lower(), ent.label_) for ent in nlp(chunk).ents] for chunk in chunks]
 
 # Set up the GUI
 ctk.set_appearance_mode("System")  # Modes: system (default), light, dark
@@ -171,7 +200,11 @@ header_frame.pack(fill="x")
 
 if logo_photo:
     logo_label = ctk.CTkLabel(header_frame, image=logo_photo, text="", font=("Helvetica", 16, "bold"))
-    logo_label.pack(pady=10)
+    logo_label.pack(side="left", pady=10, padx=10)
+
+# In the main part of the code, update the button command
+plus_button = ctk.CTkButton(header_frame, text="+", width=30, height=30, command=add_new_information)
+plus_button.pack(side="right", padx=10, pady=10)
 
 chat_frame = ctk.CTkFrame(root, width=600, height=500, corner_radius=10)
 chat_frame.pack(pady=10, padx=10, fill="both", expand=True)

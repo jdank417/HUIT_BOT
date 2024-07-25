@@ -81,6 +81,27 @@ Dell Lookup: https://www.dell.com/support/home/en-us
 
 FAS Work Order: https://oprp.fas.harvard.edu/presto-2
 
+[SECTION: Athletics Recreation membership system (Fusion)]
+
+If Error persists after reinstall try rebuilding WMI repository and check if the issue persists:
+
+1. Press Windows key + X key both together on the keyboard.
+
+2. Select Command Prompt (Admin)
+
+3. Type the command 'net stop winmgmt' and press Enter.
+
+4. Leave the command prompt open and click Start and type system32 -> Open the folder system32 from the result pane.
+
+5. From the system32 folder open Wbem and look for the folder Repository
+
+6. Right click on Repository and click rename.
+
+7. Change the folder name from Repository to Repository.old
+
+8. Switch back to command prompt and type net start winmgmt and hit enter to execute
+
+9. Close all the windows and reboot the computer and now try opening the system information.
 
 
 [SECTION: Security and Management Tools]
@@ -379,4 +400,6 @@ For macOS AND Windows:
 Author: Jason Dank - Technical Support Engineer Intern (Field Tech - Allston / SEAS)
 
 Contact: jason_dank@harvard.edu - Email with change requests
+
+
 
