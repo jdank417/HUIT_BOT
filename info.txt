@@ -164,6 +164,8 @@ MIDAS: https://midas.cadm.harvard.edu/menuHandler.do?target=search
 
 HUIT Tools (NOC): https://tools.noc.harvard.edu/
 
+Go to this link to register a device on the network: Client Management > Proxy Registration > Register Device
+
 
 
 [SECTION: Helpful Tips]
@@ -247,7 +249,7 @@ Finder > Go > Go to Folder > /private/var/log/jamf.log > Open
 
 
 
-[SECTION: HUITIZE]]
+[SECTION: HUITIZE]
 
 1. Download both the .ps1 file and the .bat file from the provided link
 
