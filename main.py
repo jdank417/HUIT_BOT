@@ -6,26 +6,36 @@ from rapidfuzz import fuzz, process
 import asyncio
 import textwrap
 import customtkinter as ctk
-from PIL import Image
-from customtkinter import CTkImage
+from PIL import Image, ImageTk
 import random
 import re
+import tkinter as tk
 
 # Load models
 nlp = spacy.load('en_core_web_sm')
 model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
 # Load and preprocess text data
-with open('info.txt', 'r', encoding='utf-8') as file:
-    text = file.read()
+try:
+    with open('info.txt', 'r', encoding='utf-8') as file:
+        text = file.read().strip()
+except FileNotFoundError:
+    text = ""
 
 # Split text into chunks based on the section markers
-chunks = text.split('[SECTION:')
-chunks = ['[SECTION:' + chunk.strip() for chunk in chunks if chunk.strip()]
+if text:
+    chunks = text.split('[SECTION:')
+    chunks = ['[SECTION:' + chunk.strip() for chunk in chunks if chunk.strip()]
+else:
+    chunks = []
 
 # Precompute embeddings and NER entities for each chunk
-chunk_embeddings = model.encode(chunks, convert_to_tensor=True)
-chunk_entities = [[(ent.text.lower(), ent.label_) for ent in nlp(chunk).ents] for chunk in chunks]
+if chunks:
+    chunk_embeddings = model.encode(chunks, convert_to_tensor=True)
+    chunk_entities = [[(ent.text.lower(), ent.label_) for ent in nlp(chunk).ents] for chunk in chunks]
+else:
+    chunk_embeddings = torch.tensor([])
+    chunk_entities = []
 
 MAX_RESULTS = 1
 MAX_CHUNK_LENGTH = sys.maxsize  # Maximum length of each returned chunk
@@ -54,8 +64,10 @@ def process_response(response):
 
 
 async def search_text_with_fuzzy(query):
-    results = process.extract(query, chunks, limit=MAX_RESULTS, scorer=fuzz.partial_ratio)
-    return [result[0] for result in results if result[1] > 70]
+    if chunks:
+        results = process.extract(query, chunks, limit=MAX_RESULTS, scorer=fuzz.partial_ratio)
+        return [result[0] for result in results if result[1] > 70]
+    return []
 
 
 async def search_text_with_ner(query):
@@ -66,11 +78,13 @@ async def search_text_with_ner(query):
 
 
 async def search_text_with_bert(query):
-    query_embedding = model.encode(query, convert_to_tensor=True)
-    similarities = util.pytorch_cos_sim(query_embedding, chunk_embeddings)[0]
-    top_k = min(MAX_RESULTS, len(chunks))
-    top_results = torch.topk(similarities, k=top_k)
-    return [chunks[idx] for idx in top_results[1]]
+    if chunk_embeddings.size(0) > 0:
+        query_embedding = model.encode(query, convert_to_tensor=True)
+        similarities = util.pytorch_cos_sim(query_embedding, chunk_embeddings)[0]
+        top_k = min(MAX_RESULTS, len(chunks))
+        top_results = torch.topk(similarities, k=top_k)
+        return [chunks[idx] for idx in top_results[1]]
+    return []
 
 
 async def get_response(message):
@@ -124,19 +138,15 @@ async def process_user_message(message):
 
 
 def display_message(message, sender):
-    bubble_frame = ctk.CTkFrame(chat_log_frame, corner_radius=10, fg_color="#DDDDDD" if sender == "bot" else "#780606")
-    bubble_label = ctk.CTkLabel(bubble_frame, text=message, wraplength=400, justify="left", anchor="w",
-                                text_color="black" if sender == "bot" else "white")
-    bubble_label.pack(padx=5, pady=5, fill="both", expand=True)
+    chat_log_text.config(state=tk.NORMAL)  # Enable editing to insert new messages
 
-    # Determine where to pack the bubble_frame
     if sender == "user":
-        bubble_frame.pack(anchor="e", padx=5, pady=5, fill="x", expand=True)
+        chat_log_text.insert(tk.END, f"User: {message}\n\n", "user")
     else:
-        bubble_frame.pack(anchor="w", padx=5, pady=5, fill="x", expand=True)
+        chat_log_text.insert(tk.END, f"Bot: {message}\n\n", "bot")
 
-    chat_log_frame.update_idletasks()  # Update layout after packing
-    chat_log_canvas.yview_moveto(1.0)  # Scroll to the bottom
+    chat_log_text.config(state=tk.DISABLED)  # Disable editing to make it read-only
+    chat_log_text.yview(tk.END)  # Scroll to the bottom
 
 
 # Set up the GUI
@@ -146,40 +156,48 @@ ctk.set_default_color_theme("blue")  # Themes: blue (default), dark-blue, green
 root = ctk.CTk()
 root.title("Optimistic Optimizer")
 root.geometry("600x600")
+root.resizable(False, False)  # Prevent resizing to maintain layout
 
 # Load and set the logo using CTkImage
-logo_image = Image.open('HUITLogo.png')  # Path to your logo image
-logo_image = logo_image.resize((500, 80), Image.LANCZOS)  # Resize using LANCZOS resampling
-logo_photo = CTkImage(light_image=logo_image, dark_image=logo_image, size=(500, 80))
+try:
+    logo_image = Image.open('HUITLogo.png')  # Path to your logo image
+    logo_image = logo_image.resize((500, 80), Image.LANCZOS)  # Resize using LANCZOS resampling
+    logo_photo = ctk.CTkImage(light_image=logo_image, dark_image=logo_image, size=(500, 80))
+except FileNotFoundError:
+    logo_photo = None
 
 header_frame = ctk.CTkFrame(root, height=100, bg_color="#780606")
 header_frame.pack(fill="x")
 
-logo_label = ctk.CTkLabel(header_frame, image=logo_photo, text="")
-logo_label.pack(pady=10)
+if logo_photo:
+    logo_label = ctk.CTkLabel(header_frame, image=logo_photo, text="", font=("Helvetica", 16, "bold"))
+    logo_label.pack(pady=10)
 
-chat_frame = ctk.CTkFrame(root, width=600, height=500)
+chat_frame = ctk.CTkFrame(root, width=600, height=500, corner_radius=10)
 chat_frame.pack(pady=10, padx=10, fill="both", expand=True)
 
-chat_log_canvas = ctk.CTkCanvas(chat_frame)
-chat_log_canvas.pack(side="left", fill="both", expand=True)
+# Use tkinter Text widget for better scrolling
+chat_log_text = tk.Text(chat_frame, wrap=tk.WORD, state=tk.DISABLED, bg="#f5f5f5", fg="#333", font=("Helvetica", 12))
+chat_log_text.pack(side="left", fill="both", expand=True)
 
-chat_log_scrollbar = ctk.CTkScrollbar(chat_frame, orientation="vertical", command=chat_log_canvas.yview)
+chat_log_scrollbar = tk.Scrollbar(chat_frame, orient="vertical", command=chat_log_text.yview)
 chat_log_scrollbar.pack(side="right", fill="y")
 
-chat_log_frame = ctk.CTkFrame(chat_log_canvas)
-chat_log_canvas.create_window((0, 0), window=chat_log_frame, anchor="nw")
-chat_log_frame.bind("<Configure>", lambda e: chat_log_canvas.configure(scrollregion=chat_log_canvas.bbox("all")))
+chat_log_text.config(yscrollcommand=chat_log_scrollbar.set)
 
-input_frame = ctk.CTkFrame(root)
+# Add tags to differentiate between user and bot messages
+chat_log_text.tag_config("user", foreground="#0000FF", font=("Helvetica", 12, "bold"))
+chat_log_text.tag_config("bot", foreground="#008000", font=("Helvetica", 12))
+
+input_frame = ctk.CTkFrame(root, height=80)
 input_frame.pack(pady=10, padx=10, fill="x")
 
 user_input = ctk.StringVar()
-entry_box = ctk.CTkEntry(input_frame, textvariable=user_input, width=450)
+entry_box = ctk.CTkEntry(input_frame, textvariable=user_input, width=450, placeholder_text="Type your message here...")
 entry_box.pack(side="left", padx=(0, 10), pady=10, fill="x", expand=True)
 entry_box.bind("<Return>", send_message)
 
-send_button = ctk.CTkButton(input_frame, text="Send", command=send_message)
+send_button = ctk.CTkButton(input_frame, text="Send", command=send_message, width=100)
 send_button.pack(side="left", pady=10)
 
 root.mainloop()
