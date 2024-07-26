@@ -418,6 +418,9 @@ Author: Jason Dank - Technical Support Engineer Intern (Field Tech - Alston / SE
 Contact: jason_dank@harvard.edu - Email with change requests
 
 
+[SECTION: What is your name, Bot's name]
+My name is the Optimistic Optimizer, or Big O for short!!! I was created by Jason Dank, a Technical Support Engineer Intern at Harvard University with the help and guidance of colleagues and the internet.
+
 
 
 [SECTION: How to Fill the Water Jug]
