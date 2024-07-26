@@ -44,6 +44,8 @@ MAX_CHUNK_LENGTH = sys.maxsize  # Maximum length of each returned chunk
 conversation_context = []
 
 def summarize_chunk(chunk):
+    # Remove section header
+    chunk = re.sub(r'\[SECTION:[^\]]*\]', '', chunk).strip()
     if len(chunk) > MAX_CHUNK_LENGTH:
         return textwrap.shorten(chunk, width=MAX_CHUNK_LENGTH, placeholder="...")
     return chunk
@@ -55,8 +57,8 @@ def process_response(response):
     # Remove multiple spaces
     response = re.sub(' +', ' ', response)
 
-    # Add a friendly opener
-    openers = ["I hope this helps! ", "Here's what I found: ", "Let me share this with you: "]
+    # Add a friendly opener and a line of space between the greeting and the information
+    openers = ["I hope this helps!\n\n", "Here's what I found:\n\n", "Let me share this with you:\n\n"]
     response = random.choice(openers) + response
 
     return response
@@ -184,8 +186,8 @@ ctk.set_default_color_theme("blue")  # Themes: blue (default), dark-blue, green
 
 root = ctk.CTk()
 root.title("Optimistic Optimizer")
-root.geometry("600x600")
-root.resizable(False, False)  # Prevent resizing to maintain layout
+root.geometry("700x600")
+root.resizable(True, True)  # Allow resizing of the main window
 
 # Load and set the logo using CTkImage
 try:
@@ -203,8 +205,8 @@ if logo_photo:
     logo_label.pack(side="left", pady=10, padx=10)
 
 # In the main part of the code, update the button command
-plus_button = ctk.CTkButton(header_frame, text="+", width=30, height=30, command=add_new_information)
-plus_button.pack(side="right", padx=10, pady=10)
+teach_button = ctk.CTkButton(header_frame, text="Add Knowledge", width=100, height=30, command=add_new_information)
+teach_button.pack(side="right", padx=10, pady=10)
 
 chat_frame = ctk.CTkFrame(root, width=600, height=500, corner_radius=10)
 chat_frame.pack(pady=10, padx=10, fill="both", expand=True)
