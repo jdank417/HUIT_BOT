@@ -166,7 +166,7 @@ if nlp:
 
         new_window = CTkToplevel(root)
         new_window.title("Add New Information")
-        new_window.geometry("400x400")
+        new_window.geometry("500x500")
 
         title_label = ctk.CTkLabel(new_window, text="Title:")
         title_label.pack(pady=(10, 0), padx=10, anchor="w")
