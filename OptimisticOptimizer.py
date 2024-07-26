@@ -13,7 +13,6 @@ import tkinter as tk
 from customtkinter import CTkToplevel, CTkTextbox
 
 
-
 def validate_spacy():
     try:
         nlp = spacy.load('en_core_web_sm')
@@ -23,8 +22,8 @@ def validate_spacy():
         print(f"Error loading SpaCy model: {e}")
         return None
 
-nlp = validate_spacy()
 
+nlp = validate_spacy()
 
 if nlp:
     # Load and preprocess text data
@@ -50,13 +49,16 @@ if nlp:
 
         return text, chunks, chunk_embeddings, chunk_entities
 
+
     model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
     text, chunks, chunk_embeddings, chunk_entities = load_text_data()
 
     MAX_RESULTS = 1
-    MAX_CHUNK_LENGTH = sys.maxsize  # Maximum length of each returned chunk
+    MAX_CHUNK_LENGTH = sys.maxsize  # Maximum length of each returned chunk, more of a placeholder at this point. (If
+                                    # my reaserch is correct = 2,147,483,647)
 
     conversation_context = []
+
 
     def summarize_chunk(chunk):
         chunk = re.sub(r'\[SECTION:[^\]]*\]', '', chunk).strip()
@@ -64,12 +66,14 @@ if nlp:
             return textwrap.shorten(chunk, width=MAX_CHUNK_LENGTH, placeholder="...")
         return chunk
 
+
     def process_response(response):
         response = '. '.join(sentence.capitalize() for sentence in response.split('. '))
         response = re.sub(' +', ' ', response)
-        openers = ["I hope this helps!\n\n", "Here's what I found:\n\n", "Let me share this with you:\n\n"]
+        openers = ["Take a look at this!\n\n", "Check this out:\n\n", "Hmmm, This might just do the trick:\n\n"]
         response = random.choice(openers) + response
         return response
+
 
     async def search_text_with_fuzzy(query):
         if chunks:
@@ -77,11 +81,13 @@ if nlp:
             return [result[0] for result in results if result[1] > 70]
         return []
 
+
     async def search_text_with_ner(query):
         doc = nlp(query)
         query_entities = set((ent.text.lower(), ent.label_) for ent in doc.ents)
         return [chunk for chunk, entities in zip(chunks, chunk_entities) if query_entities.intersection(entities)][
                :MAX_RESULTS]
+
 
     async def search_text_with_bert(query):
         if chunk_embeddings.size(0) > 0:
@@ -91,6 +97,7 @@ if nlp:
             top_results = torch.topk(similarities, k=top_k)
             return [chunks[idx] for idx in top_results[1]]
         return []
+
 
     async def get_response(message):
         global conversation_context
@@ -110,7 +117,7 @@ if nlp:
                 info = ' '.join(summarized_results)
 
                 if info in conversation_context:
-                    response = "I've mentioned this before, but just to reiterate: " + info
+                    response = "I think I've mentioned this before, but to reiterate: " + info
                 else:
                     response = process_response(info)
                     conversation_context.append(info)
@@ -119,9 +126,13 @@ if nlp:
 
                 return response
             else:
-                return "I'm afraid I don't have any new information about that. Is there something else you'd like to know?"
+                return ("I'm afraid I don't have any new information about that. If you or one of your colleges does "
+                        "can you add it to my Knowledge Base?!?")
         else:
-            return "I'm here to help! Could you please ask a more specific question or provide more details?"
+            return ("I'm here to help! Could you please ask a more specific question or provide more details? If I "
+                    "seem to be having trouble answering this type of question would you please add information "
+                    "related to it to my Knowledge Base?")
+
 
     def send_message(event=None):
         user_message = user_input.get("1.0", tk.END).strip()
@@ -131,6 +142,7 @@ if nlp:
             show_loading()
             asyncio.run(process_user_message(user_message))
 
+
     async def process_user_message(message):
         global conversation_context
         conversation_context.append(f"User: {message}")
@@ -139,9 +151,10 @@ if nlp:
         except Exception as e:
             response = "Sorry, there was an error retrieving the response. Please try again."
             print(f"Error: {e}")
-        conversation_context.append(f"Bot: {response}")
-        display_message(response, "bot")
+        conversation_context.append(f"Big O: {response}")
+        display_message(response, "Big O")
         hide_loading()
+
 
     def display_message(message, sender):
         chat_log_text.config(state=tk.NORMAL)
@@ -149,10 +162,11 @@ if nlp:
         if sender == "user":
             chat_log_text.insert(tk.END, f"User: {message}\n\n", "user")
         else:
-            chat_log_text.insert(tk.END, f"Bot: {message}\n\n", "bot")
+            chat_log_text.insert(tk.END, f"Big O: {message}\n\n", "Big O")
 
         chat_log_text.config(state=tk.DISABLED)
         chat_log_text.yview(tk.END)
+
 
     def add_new_information():
         def save_info():
@@ -183,15 +197,19 @@ if nlp:
         save_button = ctk.CTkButton(new_window, text="Save", command=save_info)
         save_button.pack(pady=10)
 
+
     def reload_text_data():
         global text, chunks, chunk_embeddings, chunk_entities
         text, chunks, chunk_embeddings, chunk_entities = load_text_data()
 
+
     def show_loading():
         loading_label.pack(side="right", padx=10, pady=10)
 
+
     def hide_loading():
         loading_label.pack_forget()
+
 
     # Set up the GUI
     ctk.set_appearance_mode("System")  # Modes: system (default), light, dark
@@ -222,7 +240,8 @@ if nlp:
     chat_frame = ctk.CTkFrame(root, width=600, height=500, corner_radius=10)
     chat_frame.pack(pady=10, padx=10, fill="both", expand=True)
 
-    chat_log_text = tk.Text(chat_frame, wrap=tk.WORD, state=tk.DISABLED, bg="#f5f5f5", fg="#333", font=("Helvetica", 12))
+    chat_log_text = tk.Text(chat_frame, wrap=tk.WORD, state=tk.DISABLED, bg="#f5f5f5", fg="#333",
+                            font=("Helvetica", 12))
     chat_log_text.pack(pady=10, padx=10, fill="both", expand=True, side="left")
 
     chat_log_scrollbar = ctk.CTkScrollbar(chat_frame, command=chat_log_text.yview)
@@ -232,7 +251,7 @@ if nlp:
 
     chat_log_text.config(yscrollcommand=chat_log_scrollbar.set)
     chat_log_text.tag_configure("user", foreground="#0000ff", font=("Helvetica", 12, "bold"))
-    chat_log_text.tag_configure("bot", foreground="#333333", font=("Helvetica", 12))
+    chat_log_text.tag_configure("Big O", foreground="#333333", font=("Helvetica", 12))
 
     user_input = ctk.CTkTextbox(root, height=50, font=("Helvetica", 12))
     user_input.pack(pady=(0, 10), padx=10, fill="x")
