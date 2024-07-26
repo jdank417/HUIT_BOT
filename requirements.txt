@@ -5,3 +5,4 @@ customtkinter~=5.2.2
 future~=1.0.0
 rapidfuzz~=3.9.4
 pillow~=10.3.0
+pyinstaller~=6.9.0
