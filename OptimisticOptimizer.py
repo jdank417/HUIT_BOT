@@ -6,7 +6,7 @@ from rapidfuzz import fuzz, process
 import asyncio
 import textwrap
 import customtkinter as ctk
-from PIL import Image, ImageTk
+from PIL import Image
 import random
 import re
 import tkinter as tk
@@ -15,6 +15,7 @@ from customtkinter import CTkToplevel, CTkTextbox
 # Load models
 nlp = spacy.load('en_core_web_sm')
 model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+
 
 # Load and preprocess text data
 def load_text_data():
@@ -39,6 +40,7 @@ def load_text_data():
 
     return text, chunks, chunk_embeddings, chunk_entities
 
+
 text, chunks, chunk_embeddings, chunk_entities = load_text_data()
 
 MAX_RESULTS = 1
@@ -46,11 +48,13 @@ MAX_CHUNK_LENGTH = sys.maxsize  # Maximum length of each returned chunk
 
 conversation_context = []
 
+
 def summarize_chunk(chunk):
     chunk = re.sub(r'\[SECTION:[^\]]*\]', '', chunk).strip()
     if len(chunk) > MAX_CHUNK_LENGTH:
         return textwrap.shorten(chunk, width=MAX_CHUNK_LENGTH, placeholder="...")
     return chunk
+
 
 def process_response(response):
     response = '. '.join(sentence.capitalize() for sentence in response.split('. '))
@@ -59,16 +63,20 @@ def process_response(response):
     response = random.choice(openers) + response
     return response
 
+
 async def search_text_with_fuzzy(query):
     if chunks:
         results = process.extract(query, chunks, limit=MAX_RESULTS, scorer=fuzz.partial_ratio)
         return [result[0] for result in results if result[1] > 70]
     return []
 
+
 async def search_text_with_ner(query):
     doc = nlp(query)
     query_entities = set((ent.text.lower(), ent.label_) for ent in doc.ents)
-    return [chunk for chunk, entities in zip(chunks, chunk_entities) if query_entities.intersection(entities)][:MAX_RESULTS]
+    return [chunk for chunk, entities in zip(chunks, chunk_entities) if query_entities.intersection(entities)][
+           :MAX_RESULTS]
+
 
 async def search_text_with_bert(query):
     if chunk_embeddings.size(0) > 0:
@@ -78,6 +86,7 @@ async def search_text_with_bert(query):
         top_results = torch.topk(similarities, k=top_k)
         return [chunks[idx] for idx in top_results[1]]
     return []
+
 
 async def get_response(message):
     global conversation_context
@@ -110,6 +119,7 @@ async def get_response(message):
     else:
         return "I'm here to help! Could you please ask a more specific question or provide more details?"
 
+
 def send_message(event=None):
     user_message = user_input.get("1.0", tk.END).strip()
     if user_message:
@@ -117,6 +127,7 @@ def send_message(event=None):
         user_input.delete("1.0", tk.END)
         show_loading()
         asyncio.run(process_user_message(user_message))
+
 
 async def process_user_message(message):
     global conversation_context
@@ -130,6 +141,7 @@ async def process_user_message(message):
     display_message(response, "bot")
     hide_loading()
 
+
 def display_message(message, sender):
     chat_log_text.config(state=tk.NORMAL)
 
@@ -140,6 +152,7 @@ def display_message(message, sender):
 
     chat_log_text.config(state=tk.DISABLED)
     chat_log_text.yview(tk.END)
+
 
 def add_new_information():
     def save_info():
@@ -170,9 +183,11 @@ def add_new_information():
     save_button = ctk.CTkButton(new_window, text="Save", command=save_info)
     save_button.pack(pady=10)
 
+
 def reload_text_data():
     global text, chunks, chunk_embeddings, chunk_entities
     text, chunks, chunk_embeddings, chunk_entities = load_text_data()
+
 
 # Set up the GUI
 ctk.set_appearance_mode("System")  # Modes: system (default), light, dark
@@ -229,10 +244,13 @@ loading_label = ctk.CTkLabel(root, text="Processing...", font=("Helvetica", 12),
 loading_label.pack(pady=10)
 loading_label.pack_forget()
 
+
 def show_loading():
     loading_label.pack()
 
+
 def hide_loading():
     loading_label.pack_forget()
+
 
 root.mainloop()
