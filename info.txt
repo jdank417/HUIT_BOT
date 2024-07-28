@@ -431,3 +431,5 @@ Manager of Alston / SEAS is Travis Gardner
 
 [SECTION: Standard Computer Models]
 https://harvard.service-now.com/ithelp?id=sc_cat_item&sys_id=05d7a432dbacc7c083a2f3f7bf961977
+[SECTION: How to sand a piece of wood / Sanding wood]
+Start with a lower grit and increase up to 220

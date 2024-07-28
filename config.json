@@ -1,0 +1,8 @@
+{
+  "max_results": 1,
+  "max_chunk_length": 2147483647,
+  "conversation_history_limit": 5,
+  "model_name": "paraphrase-MiniLM-L6-v2",
+  "text_file": "info.txt",
+  "logo_file": "HUITLogo.png"
+}
