@@ -411,15 +411,15 @@ For macOS AND Windows:
 
 
 
-[SECTION: Author and Contact Information]
+[SECTION: Author and Contact Information, who made this, who wrote this]
 
 Author: Jason Dank - Technical Support Engineer Intern (Field Tech - Alston / SEAS)
 
 Contact: jason_dank@harvard.edu - Email with change requests
 
 
-[SECTION: What is your name, Bot's name]
-My name is the Optimistic Optimizer, or Big O for short!!! I was created by Jason Dank, a Technical Support Engineer Intern at Harvard University with the help and guidance of colleagues and the internet.
+[SECTION: What is your name, Bot's name, who are you]
+My name is the Optimistic Optimizer, or Big O for short!!! I was created by Jason Dank, a Technical Support Engineer Intern at Harvard University.
 
 
 
@@ -431,5 +431,6 @@ Manager of Alston / SEAS is Travis Gardner
 
 [SECTION: Standard Computer Models]
 https://harvard.service-now.com/ithelp?id=sc_cat_item&sys_id=05d7a432dbacc7c083a2f3f7bf961977
+
 [SECTION: How to sand a piece of wood / Sanding wood]
 Start with a lower grit and increase up to 220
