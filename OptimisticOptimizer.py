@@ -19,10 +19,17 @@ import json
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Load configuration
-def load_config() -> dict:
+def load_config(config_path='config.json') -> dict:
     """Load configuration from a JSON file."""
-    with open('config.json', 'r') as config_file:
-        return json.load(config_file)
+    try:
+        with open(config_path, 'r') as config_file:
+            return json.load(config_file)
+    except FileNotFoundError:
+        logging.error(f"Configuration file not found: {config_path}")
+        sys.exit(1)
+    except json.JSONDecodeError:
+        logging.error(f"Error decoding JSON configuration file: {config_path}")
+        sys.exit(1)
 
 config = load_config()
 
@@ -140,7 +147,6 @@ async def get_response(message: str) -> str:
 
 def validate_input(input_text: str) -> str:
     """Sanitize and validate user input."""
-    # Basic sanitation
     sanitized = input_text.replace('<', '').replace('>', '')
     return sanitized
 
@@ -182,10 +188,13 @@ def add_new_information():
         title = title_entry.get().strip()
         details = details_text.get("1.0", tk.END).strip()
         if title and details:
-            with open(TEXT_FILE, 'a', encoding='utf-8') as file:
-                file.write(f"\n[SECTION: {title}]\n{details}\n")
-            new_window.destroy()
-            reload_text_data()
+            try:
+                with open(TEXT_FILE, 'a', encoding='utf-8') as file:
+                    file.write(f"\n[SECTION: {title}]\n{details}\n")
+                new_window.destroy()
+                reload_text_data()
+            except Exception as e:
+                logging.error(f"Error saving new information: {e}")
 
     new_window = CTkToplevel(root)
     new_window.title("Add New Information")
