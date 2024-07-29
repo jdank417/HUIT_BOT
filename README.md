@@ -2,7 +2,7 @@
 
 This project implements a chatbot that provides information based on text search using various techniques: fuzzy matching, Named Entity Recognition (NER), and BERT embeddings. The bot can process user queries to find relevant lines from a text file and return the most pertinent information.
 
-Thus prohect utilizes en_core_web_sm a CNN for natural Language processing by Assigning context-specific token vectors, POS tags, dependency parse, and named entities
+This project utilizes en_core_web_sm a CNN for natural Language processing by Assigning context-specific token vectors, POS tags, dependency parse, and named entities
 **Features**
 
 Fuzzy Matching: Uses the rapidfuzz library to find lines similar to the query text.
