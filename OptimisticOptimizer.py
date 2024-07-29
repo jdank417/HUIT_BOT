@@ -13,7 +13,7 @@ import re
 import tkinter as tk
 from customtkinter import CTkToplevel, CTkTextbox
 import logging
-from typing import List, Tuple, Optional
+from typing import List, Tuple
 import json
 
 # Configure logging
