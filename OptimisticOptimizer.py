@@ -1,3 +1,4 @@
+import os
 import sys
 import spacy
 from sentence_transformers import SentenceTransformer, util
@@ -42,15 +43,21 @@ TEXT_FILE = config["text_file"]
 LOGO_FILE = config["logo_file"]
 
 # Load models
-def validate_spacy() -> Optional[spacy.language.Language]:
-    """Load SpaCy model and handle exceptions."""
+def validate_spacy():
     try:
         nlp = spacy.load('en_core_web_sm')
-        logging.info("SpaCy model loaded successfully.")
+        print("SpaCy model loaded successfully.")
         return nlp
-    except Exception as e:
-        logging.error(f"Error loading SpaCy model: {e}")
-        return None
+    except Exception:
+        print("SpaCy model not found. Downloading...")
+        try:
+            os.system("python -m spacy download en_core_web_sm")
+            nlp = spacy.load('en_core_web_sm')
+            print("SpaCy model loaded successfully after download.")
+            return nlp
+        except Exception as e:
+            print(f"Error loading SpaCy model: {e}")
+            return None
 
 nlp = validate_spacy()
 model = SentenceTransformer(MODEL_NAME)
