@@ -263,6 +263,11 @@ Finder > Go > Go to Folder > /private/var/log/jamf.log > Open
 17. Windows will boot up for you to start HUITizing
 
 
+[SECTION: G1 / G5]
+Prep: https://harvard.service-now.com/ithelp?id=kb_article&sys_id=153c3d0e47af869010fc7a04716d4333
+
+Prep and Login: https://harvard.service-now.com/now/nav/ui/classic/params/target/kb_view.do%3Fsys_kb_id%3D1e1515f54786915001b1f13a536d4361
+
 
 [SECTION: HUITIZE]
 
