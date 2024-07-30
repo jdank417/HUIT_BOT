@@ -15,6 +15,8 @@ from customtkinter import CTkToplevel, CTkTextbox
 import logging
 from typing import List, Tuple
 import json
+import matplotlib
+matplotlib.use("Agg")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
