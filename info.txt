@@ -225,6 +225,10 @@ Google Shared Drive KB Article: https://harvard.service-now.com/now/nav/ui/class
 Finder > Go > Go to Folder > /private/var/log/jamf.log > Open
 
 
+[SECTION: Harvard IP-Phone, VOIP]
+https://harvard.service-now.com/ithelp?id=kb_article&sys_id=ef4eb8d3976b3910d8353b47f053af55
+
+
 
 [SECTION: Installing Windows 11 from Boot media to HUITIZE]
 
