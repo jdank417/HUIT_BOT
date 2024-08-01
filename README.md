@@ -1,24 +1,63 @@
-**The Optimistic Optimizer**
+**Optimistic Optimizer**
 
-This project implements a chatbot that provides information based on text search using various techniques: fuzzy matching, Named Entity Recognition (NER), and BERT embeddings. The bot can process user queries to find relevant lines from a text file and return the most pertinent information.
+The Optimistic Optimizer is an intelligent text-based assistant built using customTkinter for the GUI, integrated with advanced NLP and semantic search capabilities. It leverages SpaCy for named entity recognition and the SentenceTransformer for semantic text search, offering a rich and interactive user experience.
 
-This project utilizes en_core_web_sm a CNN for natural Language processing by Assigning context-specific token vectors, POS tags, dependency parse, and named entities
 **Features**
+Interactive GUI: A sleek and responsive interface built with customTkinter.
+Natural Language Processing: Utilizes SpaCy for named entity recognition and preprocessing.
+Semantic Search: Integrates SentenceTransformer to perform semantic text searches.
+Fuzzy Search: Employs rapidfuzz for efficient fuzzy matching.
+Configurable Settings: Easily adjustable settings through a JSON configuration file.
+Dynamic Text Handling: Processes and manages large text datasets efficiently, splitting them into manageable chunks and summarizing them.
+Conversation History: Maintains a context-aware conversation history.
+User-Friendly Input: Provides functionality to add new information to the text dataset dynamically.
 
-Fuzzy Matching: Uses the rapidfuzz library to find lines similar to the query text.
-Named Entity Recognition: Leverages spaCy to extract entities from both the query and text lines, matching entities for relevant results.
-Semantic Search with BERT: Utilizes the sentence-transformers library to compute semantic embeddings for improved relevance matching.
-Asynchronous Processing: Uses asyncio for efficient query handling and response generation.
-
-**Requirements**
-
-Python 3.7+
-spacy
-sentence-transformers
-torch
-rapidfuzz
-Installation
+**Installation**
+Prerequisites
+Python 3.7 or higher
+Required Python packages (listed in requirements.txt)
 
 
-**Prepare Your Data:** Create a text file named info.txt in the same directory as the script. This file should contain the lines of text that the chatbot will search through.
+**Usage**
+Run the application:
 
+bash
+Copy code
+python main.py
+Using the GUI:
+
+Send Messages: Type your message in the input box and press Enter or click the "Send" button.
+Add Knowledge: Click the "Add Knowledge" button to open a new window where you can add new information to the text dataset.
+
+**Code Overview**
+
+Main Components
+Configuration and Constants:
+
+Loads configuration settings from config.json.
+Sets up logging and constant parameters.
+Model Initialization:
+
+Validates and loads the SpaCy model.
+Loads the SentenceTransformer model specified in the configuration.
+Text Data Processing:
+
+Loads and preprocesses text data, splitting it into chunks and computing embeddings.
+Extracts named entities from each chunk.
+Utility Functions:
+
+Summarizes text chunks and formats responses.
+Implements fuzzy search, NER-based search, and BERT-based semantic search.
+GUI Functions:
+
+Handles user inputs and displays messages in the chat log.
+Provides functionality to add new information to the text dataset dynamically.
+Example Code Snippets
+
+
+Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+
+Acknowledgments
+Special thanks to the creators of SpaCy, SentenceTransformer, and customTkinter for their excellent tools and libraries.
