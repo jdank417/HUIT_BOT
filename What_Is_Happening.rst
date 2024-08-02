@@ -1,4 +1,4 @@
-
+========================
 The Optimistic Optimizer
 ========================
 
@@ -9,7 +9,7 @@ This program is a Python-based chatbot application that uses Natural Language Pr
 Key Components
 ==============
 1. Imports and Setup
-
+---------------------
 The program imports a variety of libraries to handle different aspects of its functionality:
 
 * **os, sys**: For file handling and system operations.
@@ -30,7 +30,7 @@ The program imports a variety of libraries to handle different aspects of its fu
 Logging is configured at the start of the program to capture important events, errors, and warnings.
 
 2. Configuration Loading
-
+-------------------------
 The program reads configuration settings from a `config.json` file using the `load_config()` function. The configuration contains key parameters such as:
 
 * **MAX_RESULTS**: The maximum number of results to return from searches.
@@ -43,7 +43,7 @@ The program reads configuration settings from a `config.json` file using the `lo
 The function handles errors such as missing or improperly formatted configuration files and exits the program if critical errors are encountered.
 
 3. Model Validation and Loading
-
+-------------------------------
 * **SpaCy Model Validation**:
   The `validate_spacy()` function ensures that the required SpaCy model (`en_core_web_sm`) is loaded. If the model is not found, it attempts to download and load it.
   This ensures that the application has the necessary NLP tools for tasks like named entity recognition.
@@ -53,7 +53,7 @@ The function handles errors such as missing or improperly formatted configuratio
   This model is used for generating embeddings for semantic search.
 
 4. Text Data Processing
-
+-----------------------
 The program reads text data from a file specified by `TEXT_FILE` in the configuration. This data is preprocessed into chunks, each associated with:
 
 * **Text Content**: The raw text divided into chunks based on sections.
@@ -63,7 +63,7 @@ The program reads text data from a file specified by `TEXT_FILE` in the configur
 The `load_text_data()` function handles this process, splitting the text into chunks using a predefined section marker (`[SECTION:]`). These chunks are then embedded and tagged with named entities for later search operations.
 
 5. Search and Response Functions
-
+--------------------------------
 * **Summarization**:
   The `summarize_chunk()` function summarizes text chunks that exceed a certain length, as defined by `MAX_CHUNK_LENGTH`. This prevents overly long responses from cluttering the chat.
 
@@ -83,7 +83,7 @@ The search functions (`search_text_with_fuzzy`, `search_text_with_ner`, and `sea
   The program maintains a conversation history to avoid repetitive responses and to provide continuity in the conversation.
 
 6. GUI Setup
-
+------------
 * **Appearance and Theme**:
   The GUI is set up using `customtkinter`, which allows for a more modern look and feel compared to standard `tkinter`.
   The application window (`root`) is configured with a title, dimensions, and resizability options.
@@ -118,12 +118,12 @@ The search functions (`search_text_with_fuzzy`, `search_text_with_ner`, and `sea
   The program maintains a conversation context, which stores the history of recent interactions. This helps the chatbot to avoid repeating itself and provides a sense of continuity in the conversation.
 
 8. Error Handling and Logging
-
+-----------------------------
 Throughout the program, various `try-except` blocks are used to handle potential errors, such as missing files, invalid inputs, or issues with model loading.
 Logging is used extensively to track the program's execution and capture any errors or warnings. This is crucial for debugging and ensuring the program's reliability.
 
 9. Future Considerations
-
+------------------------
 * **Performance Optimization**:
   In the future I plan on ditching the info.txt file for somthing more efficient that I can iterate through like a dictionary or ultimately a SQL Database.
 
@@ -134,9 +134,9 @@ Logging is used extensively to track the program's execution and capture any err
   The program is designed to be modular, which makes it easier to extend with new features or integrate with other systems.
 
 10. Conclusion
-
+--------------
 The Optimistic Optimizer chatbot application demonstrates the power of NLP techniques in creating interactive and engaging user experiences. By leveraging advanced models like BERT and SpaCy, the chatbot can understand user queries, retrieve relevant information, and provide meaningful responses. The combination of fuzzy searching, semantic search, and named entity recognition enhances the chatbot's capabilities and makes it more versatile in handling a wide range of user inputs. With a user-friendly GUI and robust error handling, the chatbot offers a seamless experience for users while maintaining reliability and performance.
 
 @author
-
+-------
 * Jason Dank
