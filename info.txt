@@ -443,3 +443,10 @@ https://harvard.service-now.com/ithelp?id=sc_cat_item&sys_id=05d7a432dbacc7c083a
 
 [SECTION: How to sand a piece of wood / Sanding wood]
 Start with a lower grit and increase up to 220
+
+[SECTION: who is eric]
+eric is the best
+
+[SECTION: What can you do? What do you know?]
+Hello, I'm the Optimistic Optimizer, or Big O for short! I can provide you with a variety of resources and information, such as links to Harvard services, IT support manuals, and other helpful tools. I can also assist with troubleshooting steps, software installations, and general tech support inquiries. If you have any questions or need assistance, feel free to ask, and I'll do my best to help you out!
+
