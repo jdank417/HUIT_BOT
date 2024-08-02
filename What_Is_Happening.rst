@@ -137,6 +137,4 @@ Logging is used extensively to track the program's execution and capture any err
 --------------
 The Optimistic Optimizer chatbot application demonstrates the power of NLP techniques in creating interactive and engaging user experiences. By leveraging advanced models like BERT and SpaCy, the chatbot can understand user queries, retrieve relevant information, and provide meaningful responses. The combination of fuzzy searching, semantic search, and named entity recognition enhances the chatbot's capabilities and makes it more versatile in handling a wide range of user inputs. With a user-friendly GUI and robust error handling, the chatbot offers a seamless experience for users while maintaining reliability and performance.
 
-@author
--------
-* Jason Dank
+
