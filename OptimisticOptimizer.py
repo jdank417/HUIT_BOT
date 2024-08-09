@@ -26,7 +26,11 @@ def load_config(config_path='config.json') -> dict:
     """Load configuration from a JSON file."""
     try:
         with open(config_path, 'r') as config_file:
-            return json.load(config_file)
+            config = json.load(config_file)
+            # Convert relative paths to absolute paths
+            config["text_file"] = os.path.abspath(config["text_file"])
+            config["logo_file"] = os.path.abspath(config["logo_file"])
+            return config
     except FileNotFoundError:
         logging.error(f"Configuration file not found: {config_path}")
         sys.exit(1)
@@ -203,10 +207,10 @@ def add_new_information():
                 new_window.destroy()
                 reload_text_data()
             except Exception as e:
-                logging.error(f"Error saving new information: {e}")
+                logging.error(f"Hmm, Im gonna have hard time remembering this. Please try again: {e}")
 
     new_window = CTkToplevel(root)
-    new_window.title("Add New Information")
+    new_window.title("Teach Big O")
     new_window.geometry("500x500")
 
     title_label = ctk.CTkLabel(new_window, text="Title:")
