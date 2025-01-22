@@ -351,7 +351,7 @@ Prep and Login: https://harvard.service-now.com/now/nav/ui/classic/params/target
 
 [SECTION: IMAGING COMPUTERS]
 
-Please refer to the Document located here: https://docs.google.com/document/d/1Sn7T3OMWQm43Qxd7hR6Be0t0Q3otzeWV/edit?usp=sharing&ouid=101068923790311888269&rtpof=true&sd=true
+Please refer to the Document located here: https://docs.google.com/document/d/115sI6JpRRQvBPSgqLEhlbNGvh-_AuiuV/edit?usp=sharing&ouid=101068923790311888269&rtpof=true&sd=true
 
 Scroll down to the section: "Applying images to Computers"
 
