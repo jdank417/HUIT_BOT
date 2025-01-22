@@ -131,6 +131,14 @@ user_input = tk.Entry(
     bd=1,
     relief="flat"
 )
+
+# Configure the blinking cursor
+user_input.configure(
+    insertbackground="#000000",  # Cursor color
+    insertontime=500,           # Cursor on time (ms)
+    insertofftime=500           # Cursor off time (ms)
+)
+
 user_input.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 10))
 user_input.bind("<Return>", send_message)
 
