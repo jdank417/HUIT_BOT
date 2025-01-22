@@ -450,3 +450,280 @@ eric is the best
 [SECTION: What can you do? What do you know?]
 Hello, I'm the Optimistic Optimizer, or Big O for short! I can provide you with a variety of resources and information, such as links to Harvard services, IT support manuals, and other helpful tools. I can also assist with troubleshooting steps, software installations, and general tech support inquiries. If you have any questions or need assistance, feel free to ask, and I'll do my best to help you out!
 
+[SECTION: FAS Departments]
+Academic Programs  | ACPR
+Accessible Education Office  | AEO
+Adams House  | ADMH
+Adaptive Technology Lab  | ATLB
+Administrative Operations  | OPS
+Admissions and Fin Aid  | ADMF
+African and African American Studies  | AAAS
+African Studies  | AFCM
+Animal Resources  | ANML
+Anthropology  | ANTH
+Applied Computational Science  | ACS
+Applied Mathematics  | APMA
+Applied Physics  | APPH
+Art, Film, and Visual Studies  | AFVS
+Arts and Humanities Administrative Services  | AHAS
+Arts and Humanities Division  | AHD
+Asia Center  | ASIA
+Assistive Technology Center  | ATC
+Astronomy  | ASTR
+Athletics  | ATHL
+Behavioral Sciences  | BEHS
+Bioengineering  | BIOE
+Biophysics  | BIOP
+Botany Library  | BOT
+Broad Institute  | ICG
+Bureau of Study Counsel  | BSC
+Cabot House  | CABH
+Cabot Science Library  | CSLB
+Celtic Language and Literature  | CELT
+Center for American Political Studies  | CAPS
+Center for Brain Science  | BRSC
+Center for European Studies  | CTES
+Center for Hellenic Studies  | HELS
+Weatherhead Center for International Affairs  | WCFI
+Center for Jewish Studies  | CTJS
+Center for Middle Eastern Studies  | CMES
+Center for Nanoscale Systems  | NANO
+Center for Systems Biology  | SYSB
+Charles Warren Center  | CWCT
+Chemistry and Chemical Biology  | CHEM
+Chemistry Library  | CCBL
+Classics  | CLAS
+College Library Tech Svcs  | CLTS
+College Life and Student Services  | HVCL
+Committee on Regional Studies East Asia  | RSEA
+Computer Science  | COSC
+Core Curriculum  | CORE
+Currier House  | CURH
+Davis Center for Russian Studies  | RSSU
+Dean of the Faculty  | DEAN
+Department of Comparative Literature  | CMPL
+Department of Government  | GOVT
+Department of Mathematics  | MATH
+Department of Molecular and Cellular Biology  | MCB
+Department of Organismic and Evolutionary Biology  | OEB
+Department of Psychology  | PSYC
+Department of Sociology  | SOCI
+Derek Bok Center  | BOKC
+Dudley House  | DUDH
+Dumbarton Oaks  | DOAK
+Dunster House  | DUNH
+Earth and Planetary Science  | EPS
+East Asian Languages and Civilizations  | EALC
+Economics  | ECON
+Electrical Engineering  | ELEN
+Eliot House  | ELIH
+English  | ENGL
+Environmental Science and Engineering  | ESE
+Environmental Science and Public Policy  | ESPP
+Ernst Mayr Library  | EML
+Ethnicity, Migration, Rights  | ETHN
+Expository Writing  | EXPO
+Faculty Affairs  | ACAD
+Fairbank Center  | FAIR
+FAS Administration  | ADMN
+FAS Finance  | FINL
+FAS Human Resources  | HR
+Fine Arts Library  | FALB
+Folklore and Mythology  | FOLK
+Freshman Deans Office  | FDO
+Freshman Seminar Program  | FRSP
+Gen  Education  | GENE
+Germanic Language and Literature  | GERM
+Graduate School of Arts and Sciences  | GSAS
+Harvard College Observatory  | HCO
+Harvard Forest  | FORE
+Harvard Foundation  | HFOU
+Harvard MIT Data Center  | HMDC
+Harvard Museums Of Science and Culture  | HMSC
+Harvard Stem Cell Institute  | STEM
+Harvard University Center for the Environment  | ENVR
+Harvard University Herbarium  | HUH
+Harvard-Yenching Institute  | YENC
+HCL Administration  | ADML
+HCL Programs  | PRGL
+History  | HIST
+History and Literature  | HLIT
+History of American Civilization  | HAMC
+History of Art and Architecture  | HAA
+History of Science  | HSCI
+Houghton Library  | HOUL
+Human Evolutionary Biology  | HEB
+Humanities Center  | HUMA
+Humanities Division  | HUM
+Hutchins Center for African and Afr Am Rsrch  | DUBO
+Initiative in Innovative Computing  | IIC
+Institute for Quantitative Social Science  | CRBS
+Institute for Quantitative Social Science  | IQSS
+Instructional Media Services  | IMS
+Islamic Studies Program  | ISP
+Kirkland House  | KIRH
+Korea Institute  | KORE
+Laboratory for Particle Physics and Cosmology  | HEPL
+Lamont Library  | LAM
+Language Resource Center  | LRC
+Latin American Studies  | LATS
+Leverett House  | LEVH
+Linguistics  | LING
+Literature  | LITC
+Loeb Music Library  | LOLB
+Lowell House  | LOWH
+Materials Science and Mechanical Engineering  | MSME
+Mathematical Library  | MTHL
+Mather House  | MTHH
+Medieval Studies  | MDST
+Mem Lowell Complex Administration  | MEMH
+Museum of Comparative Zoology  | MCZ
+Museum of Natural History  | HMNH
+Music  | MUSI
+Near Eastern Languages and Civilizations  | NELC
+Office for the Arts  | OFA
+Office of Career Services  | OOCS
+Office of Dean for Adm and Fin  | EXEC
+Office of International Affairs  | OIA
+Office of the Secretary  | SECF
+Origins of Life Init  | HOLI
+Peabody Museum  | PEAB
+Pforzheimer House  | PFRH
+Phillips Brooks House  | PHBH
+Philosophy  | PHIL
+Physical Resources  | FACL
+Physics  | PHYS
+Physics Research Library  | PHYL
+Piano Techical Services  | PIAN
+Pluralism Project  | PLUR
+Program for Evolutionary Dynamics  | PEVD
+Quantum Science and Engineering  | QSE
+Quincy House  | QUIH
+Registrar's Office  | REGS
+Reischauer Institute  | REIS
+Religion and Religious Studies  | RELI
+Research Administration Services  | RAS
+Romance Language and Literature  | RLL
+Rowland Institute  | ROWL
+Safra Center for Ethics  | ETHC
+Science and Engineering Services  | SES
+Science Center Operations  | SCCR
+Science Operations | SOPS
+Semitic Museum  | SEMI
+Signet Society  | SIGS
+Slavic Language and Literature  | SLAV
+Slavic Studies  | AASS
+Social Sciences Admin Support Group  | SSAG
+Social Sciences Division  | SSCI
+Social Studies  | SOST
+Society of Fellows  | SOCF
+Sourcebook Publications  | SOUR
+South Asian Studies  | SAS
+Statistics  | STAT
+Stem Cell and Regenerative Biology  | SCRB
+Theatre, Dance and Media  | TDM
+Tozzer Library  | TZLB
+Ukrainian Research Institute  | UKRR
+Undergraduate Education  | OUE
+Widener Library  | WIDL
+Winthrop House  | WINH
+Women, Gender & Sexuality  | WGS
+Yenching Library  | YENL
+Mittal South Asia Institute | MSAI
+Harvard College Institutional Research | HCIR
+Office of International Education | OIE
+Office of Diversity, Inclusion and Belonging | ODIB
+Opportunity Insights | OPIN
+
+
+[SECTION: GSE Departments]
+GSE Academic Affairs | AA
+Admissions Office | ADO
+GSE Center for Education Policy Research | CEPR
+Collaborative on Academic Careers in Higher Education | COCH
+GSE Classroom / Conference Room Systems | CRM
+Career Services Office | CSO
+Development and Alumni Relations Office | DAR
+Dean's Office | DNS
+Faculty Affairs | FA
+GSE Faculty | FAC
+Financial Aid Office | FAO
+Finance | FIN
+Center on the Developing Child | CDC
+Information Technology | IT
+Gutman Library | LIB
+Learning Initiatives and Teaching Support | LITS
+Communications and Marketing | MCOM
+Operations | OP
+Student Affairs Office | OSA
+Office of Sponsored Projects | OSP
+Professional Education / Social Impact and Lifelong Learning | PPE
+GSE Public Workstation | PUB
+Project Zero | PZ
+HGSE Research | RES
+Saul Zaentz Early Education initiative | SZI
+GSE Systems Test | TST
+GSE Systems Management | MGMT
+Easel Lab | EASL
+Education Redesign Lab | EdRL
+Faculty Support Services | FSS
+Harvard Teacher Fellows | HTF
+Human Resources | GHR
+Making Caring Common | MCC
+Reach Every Reader | RER
+Datawise Project | DWP
+Harvard Education Publishing Group | HEPG
+Teacher Education Program | TEP
+Technology In Education | TIE
+Teaching and Learning Laboratory | TLL
+GSE Registrar | GREG
+GSE Master's Degree Programs | MP
+Democratic Knowledge Project | DKP
+
+
+[SECTION: CADM Departments]
+Alumni Affairs and Development | AAD
+Harvard Library Access Services | ACC
+Allston Development Group | ADG
+American Repertory Theater | ART
+Administrative Technology Services | ATS
+Digital Imaging Group | DIG
+Digital Imaging Library | DIL
+Dining Services | DIN
+Faculty Club | FCL
+Harvard Art Museums | HAM
+Harvard College Library | HCL
+Harvard International Office | HIO
+Harvard Real Estate | HRE
+Harvard Student Association | HSA
+Harvard University Libraries | HUL
+Harvard University Press | HUP
+Inter-Library Loan | ILL
+Interfaculty Initiatives | INI
+LASPAU | LAS
+Harvard Magazine | MAG
+Marshalls Office | MAR
+Memorial Church | MEM
+Nieman Foundation | NIE
+Office of the Governing Boards | OGB
+Office of General Council | OGC
+Office of Human Relation | OHR
+Office of the Vice President and Provost | OPR
+Harvard Library Preservation Services | PRE
+HUIT | UIS
+Campus Services | UOS
+Villa I Tatti | VIT
+Vice President of Administration | VPA
+Vice President of Finance | VPF
+Harvard Public Affairs and Communications | VPG
+Widener Library | WID
+WISC | WISC
+Joint Center for Housing Studies | JCHS
+Hillel | HIL
+Advance Leadership Initiative | ALI
+Harvard University Clinical Laboratory | HUCL
+HBS iLAB | ILAB
+Kempner Institute | KEMP
+
+
+
