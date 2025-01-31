@@ -9,7 +9,7 @@ import threading
 #  CONFIG / LOADING
 # ----------------------------------------------------------------
 
-genai.configure(api_key="AIzaSyDFR1QyWkrFkMKMHj-pL_vv8qUIJyJhNqE")
+genai.configure(api_key="")
 model_name = "gemini-1.5-flash"
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
